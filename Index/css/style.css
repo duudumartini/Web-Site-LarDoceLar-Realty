@@ -220,6 +220,7 @@ header {
   display: flex;
   justify-content: space-evenly;
   height: 90vh;
+  background: linear-gradient(to top, #aaaaaa, #ffffff); /* Define o degradê vertical */
 }
 
 .bloco_esquerdo_principal_destaque{
@@ -227,6 +228,13 @@ header {
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
+}
+
+.titulo_empreendimento_destaque{
+  font-size: 50px;
+  color: #333;
+  font-family: Ananda, sans-serif;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .titulo_esquerdo_principal_destaque{
@@ -240,8 +248,8 @@ header {
 }
 
 .desc_esquerdo_principal_destaque{
+  color: #333;
   font-family: RedhatDisplayLightItalic, sans-serif;
-  text-transform: uppercase;
   font-size: 20px;
   width: 400px;
   text-align: start;
@@ -254,17 +262,13 @@ header {
   align-items: center;
 }
 
-.bloco_direito_principal_destaque p{
-  font-size: 40px;
-  color: rgb(73, 73, 73);
-  font-family: Ananda, sans-serif;
-}
-
 .bloco_direito_principal_destaque img{
-  width: 60vh;
-  height: 60vh;
+  width: 612px;
+  height: 408px;
   border-radius: 30px;
   box-shadow: 0px 0px 55px rgb(0, 0, 0);
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
 }
 
 footer{
