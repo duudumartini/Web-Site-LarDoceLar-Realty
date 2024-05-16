@@ -9,6 +9,11 @@
 }
 
 @font-face {
+  font-family: RedhatDisplayBoldItalic;
+  src: url('RedHatDisplayBoldItalic.ttf') format('truetype');
+}
+
+@font-face {
   font-family: Ananda;
   src: url('Ananda Personal Use.ttf') format('truetype');
 }
@@ -117,7 +122,7 @@ header {
   width: 70vw;
   height: 100px;
   border-radius: 20px;
-  box-shadow: 0px 10px 5px rgba(0, 0, 0, 0.39); /* Adicionando sombra */
+  box-shadow: 0px 10px 5px rgba(0, 0, 0, 0.39); 
 }
 
 .combobox_banner {
@@ -127,7 +132,7 @@ header {
   border: 1px solid #ccc;
   background-color: #fff;
   color: #333;
-  width: 15vw; /* ajuste conforme necessário */
+  width: 15vw; 
 }
 
 #campo_pesquisa {
@@ -138,18 +143,17 @@ header {
   background-color: #fff;
   color: #333;
   width: 20vw; 
-  /* ajuste conforme necessário */
 }
 
 #botao_pesquisar {
   font-family: RedhatDisplayMediumItalic, sans-serif;
-  padding: 10px 20px; /* Adiciona preenchimento vertical e horizontal */
+  padding: 10px 20px; 
   font-size: 16px;
   border-radius: 5px;
-  border: none; /* Remove a borda */
-  background-color: #007bff; /* Cor de fundo */
-  color: #fff; /* Cor do texto */
-  cursor: pointer; /* Altera o cursor ao passar por cima */
+  border: none;
+  background-color: #007bff; 
+  color: #fff; 
+  cursor: pointer; 
   transition: background-color 0.3s ease-in-out,
               color 0.3s ease-in-out,
               box-shadow 0.3s ease-in-out;
@@ -158,7 +162,7 @@ header {
 #botao_pesquisar:hover{
   background-color: burlywood;
   color: #333;
-  box-shadow: 0px 5px 5px rgb(0,123,255); /* Adicionando sombra */
+  box-shadow: 0px 5px 5px rgb(0,123,255); 
 }
 
 
@@ -169,7 +173,98 @@ header {
 .bloco_cabecalho_destaque{
   height: 100px;
   display: flex;
+  justify-content: space-around;
+}
 
+.bloco_endereco_destaque{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.endereco_destaque{
+  font-family: RedhatDisplayMediumItalic, sans-serif;
+  color: #333;
+  font-size: 16px;
+}
+
+.cidade_destaque{
+  font-family: RedhatDisplayMediumItalic, sans-serif;
+  color: #333;
+  font-size: 14px;
+}
+
+.bloco_info_cabecalho{
+  display: flex;
+}
+
+.bloco_info{
+  display: flex;
+  align-items: center;
+  margin-left: 30px;
+}
+
+.descricao_info_destaque{
+  font-family: RedhatDisplayMediumItalic, sans-serif;
+  color: #333;
+  margin-left: 10px;
+}
+
+.icone_destaques{
+  width: 40px;
+  height: 40px;
+}
+
+.bloco_principal_destaque{
+  display: flex;
+  justify-content: space-evenly;
+  height: 90vh;
+}
+
+.bloco_esquerdo_principal_destaque{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.titulo_esquerdo_principal_destaque{
+  color: #007bff;
+  margin-left: 200px;
+  font-family: RedhatDisplayBoldItalic, sans-serif;
+  text-transform: uppercase;
+  font-size: 32px;
+  width: 250px;
+  text-align: end;
+}
+
+.desc_esquerdo_principal_destaque{
+  font-family: RedhatDisplayLightItalic, sans-serif;
+  text-transform: uppercase;
+  font-size: 20px;
+  width: 400px;
+  text-align: start;
+}
+
+.bloco_direito_principal_destaque{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.bloco_direito_principal_destaque p{
+  font-size: 40px;
+  color: rgb(73, 73, 73);
+  font-family: Ananda, sans-serif;
+}
+
+.bloco_direito_principal_destaque img{
+  width: 60vh;
+  height: 60vh;
+  border-radius: 30px;
+  box-shadow: 0px 0px 55px rgb(0, 0, 0);
 }
 
 footer{
