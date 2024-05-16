@@ -1,0 +1,170 @@
+@font-face {
+  font-family: RedHatDisplayLightItalic;
+  src: url('RedHatDisplayLightItalic.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: RedhatDisplayMediumItalic;
+  src: url('RedHatDisplayMediumItalic.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: Ananda;
+  src: url('Ananda Personal Use.ttf') format('truetype');
+}
+
+
+
+body{
+  width: 100vw;
+}
+
+header {
+  background-color:  white;
+  width: 480px;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  right: 0px;
+  top: 0px;
+  border-bottom-left-radius: 30px;
+  box-shadow: 0px 10px 5px rgba(0, 0, 0, 0.39); /* Adicionando sombra */
+  transition: 0.8s ease-in-out;
+}
+
+#contatos {
+  display: flex;
+  justify-content: center;
+  transition: 0.3s ease-in-out;
+}
+
+.contatos_cabecalho {
+  display: flex;
+  align-items: center;
+  margin-left: 40px;
+  justify-content: center;
+}
+
+.icone_cabecalho{
+  width: 30px;
+}
+
+.info_telefone_cabecalho{
+  margin-left: 10px;
+}
+
+
+#icone_whatsapp_cabecalho {
+  width: 20px;
+}
+
+.telefones_cabecalho {
+  font-family: RedHatDisplayLightItalic, sans-serif;
+  margin-bottom: 4px;
+  text-align: center;
+}
+
+.info_telefones_cabecalho{
+  font-size: 12px;
+  align-items: center;
+  text-align: center;
+}
+
+#icone_menu {
+  width: 40px;
+  margin: 10px;
+  cursor: pointer;
+}
+
+#section_banner_principal {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-size: cover;
+  background-position: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+#titulo_banner{
+  color: rgb(73, 73, 73);
+  font-family: Ananda, sans-serif;
+  font-size: 5vw;
+  font-weight: 800;
+  margin-bottom: 10px;
+  opacity: 0;
+  transition: opacity 2s ease-in-out;
+}
+
+#sub_banner{
+  color: rgb(73, 73, 73);
+  font-family: RedhatDisplayMediumItalic, sans-serif;
+  font-size: 1.5vw;
+  margin-bottom: 70px;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+#bloco_pesquisa{
+  justify-content: space-around;
+  display: flex;
+  align-items: center;
+  background-color: rgb(241,241,241);
+  width: 70vw;
+  height: 100px;
+  border-radius: 20px;
+  box-shadow: 0px 10px 5px rgba(0, 0, 0, 0.39); /* Adicionando sombra */
+}
+
+.combobox_banner {
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  color: #333;
+  width: 15vw; /* ajuste conforme necessário */
+}
+
+#campo_pesquisa {
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  color: #333;
+  width: 20vw; 
+  /* ajuste conforme necessário */
+}
+
+#botao_pesquisar {
+  font-family: RedhatDisplayMediumItalic, sans-serif;
+  padding: 10px 20px; /* Adiciona preenchimento vertical e horizontal */
+  font-size: 16px;
+  border-radius: 5px;
+  border: none; /* Remove a borda */
+  background-color: #007bff; /* Cor de fundo */
+  color: #fff; /* Cor do texto */
+  cursor: pointer; /* Altera o cursor ao passar por cima */
+  transition: background-color 0.3s ease-in-out,
+              color 0.3s ease-in-out,
+              box-shadow 0.3s ease-in-out;
+
+
+}
+
+#botao_pesquisar:hover{
+  background-color: burlywood;
+  color: #333;
+  box-shadow: 0px 5px 5px rgb(0,123,255); /* Adicionando sombra */
+
+}
+
+
+
+footer{
+  height: 200px;
+  background-color: rgb(0, 59, 110);
+}
