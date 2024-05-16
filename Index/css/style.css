@@ -86,6 +86,8 @@ header {
   background-position: center;
   width: 100vw;
   height: 100vh;
+  margin-bottom: 15px;
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.39);
 }
 
 #titulo_banner{
@@ -151,20 +153,26 @@ header {
   transition: background-color 0.3s ease-in-out,
               color 0.3s ease-in-out,
               box-shadow 0.3s ease-in-out;
-
-
 }
 
 #botao_pesquisar:hover{
   background-color: burlywood;
   color: #333;
   box-shadow: 0px 5px 5px rgb(0,123,255); /* Adicionando sombra */
-
 }
 
 
+#section_destaques{
+  height: 100vh;
+}
+
+.bloco_cabecalho_destaque{
+  height: 100px;
+  display: flex;
+
+}
 
 footer{
-  height: 200px;
-  background-color: rgb(0, 59, 110);
+  height: 100vh;
+  background-color: #4ff;
 }
