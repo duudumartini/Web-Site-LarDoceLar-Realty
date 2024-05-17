@@ -293,6 +293,7 @@ header {
   width: 80vw;
   height: 80vh;
   border-radius: 40px;
+  box-shadow: 0px 0px 50px rgb(94, 94, 94);
 }
 
 #bloco_desc_porque{
@@ -328,6 +329,9 @@ header {
   top: 130px;
   left: 130px;
   border-radius: 30px;
+  opacity: 0;
+  transition: opacity 2s ease-in-out;
+  box-shadow: 0px 0px 50px rgb(0, 0, 0);
 }
 
 
@@ -338,6 +342,9 @@ header {
   top: 30px;
   left: 30px;
   border-radius: 30px;
+  transition: opacity 2s ease-in-out;
+  opacity: 0;
+  box-shadow: 0px 0px 50px rgb(0, 0, 0);
 }
 
 #imagem_casanova2 {
@@ -347,6 +354,9 @@ header {
   top: 0px;
   left: 80px;
   border-radius: 30px;
+  transition: opacity 2s ease-in-out;
+  opacity: 0;
+  box-shadow: 0px 0px 50px rgb(0, 0, 0);
 }
 
 #imagem_casanova3 {
@@ -356,36 +366,73 @@ header {
   top: 90px;
   left: 30px;
   border-radius: 30px;
+  transition: opacity 2s ease-in-out;
+  opacity: 0;
+  box-shadow: 0px 0px 50px rgb(0, 0, 0);
 }
 
 #imagem_casanova4 {
   position: absolute;
   width: 350px; /* Garante que a imagem cubra todo o container */
   height: auto; /* Mantém a proporção da imagem */
-  top: 30px;
-  left: 30px;
+  top: 210px;
+  left: 90px;
   border-radius: 30px;
+  transition: opacity 2s ease-in-out;
+  opacity: 0;
+  box-shadow: 0px 0px 50px rgb(0, 0, 0);
 }
 
 #imagem_casanova5 {
   position: absolute;
   width: 350px; /* Garante que a imagem cubra todo o container */
   height: auto; /* Mantém a proporção da imagem */
-  top: 30px;
-  left: 30px;
+  top: 90px;
+  left: 210px;
   border-radius: 30px;
+  transition: opacity 2s ease-in-out;
+  opacity: 0;
+  box-shadow: 0px 0px 50px rgb(0, 0, 0);
 }
 
 #imagem_casanova6 {
   position: absolute;
   width: 350px; /* Garante que a imagem cubra todo o container */
   height: auto; /* Mantém a proporção da imagem */
-  top: 30px;
-  left: 30px;
+  top: 140px;
+  left: 180px;
   border-radius: 30px;
+  opacity: 0;
+  transition: opacity 2s ease-in-out;
+  box-shadow: 0px 0px 50px rgb(0, 0, 0);
+}
+
+#bloco_fotos_e_itens{
+  display: flex;
+  justify-content: space-between;
+
+}
+
+#bloco_itens_porque{
+  display: flex;
+  flex-direction: column;
+  width: 600px;
+  height: 400px;
+  justify-content: space-around;
+}
+
+.item_titulo_porque{
+  margin-bottom: 10px;
+  font-family: RedhatDisplayMediumItalic, sans-serif;
+}
+
+.item_desc_porque{
+  font-family: RedhatDisplayLightItalic, sans-serif;
+  text-align: justify;
+  width: 450px;
 }
 
 footer{
-  height: 100px;
+  height:200px;
   background-color: rgb(0, 139, 231);
 }
