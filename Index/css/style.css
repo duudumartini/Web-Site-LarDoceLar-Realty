@@ -25,6 +25,7 @@ body{
 }
 
 header {
+  z-index: 1;
   background-color:  white;
   width: 480px;
   padding: 10px 20px;
@@ -168,6 +169,11 @@ header {
 
 #section_destaques{
   height: 100vh;
+  background: linear-gradient(to top, #aaaaaa, #ffffff); /* Define o degradê vertical */
+}
+
+#slider li{
+  transition: opacity 0.5s ease-in-out;
 }
 
 .bloco_cabecalho_destaque{
@@ -220,7 +226,6 @@ header {
   display: flex;
   justify-content: space-evenly;
   height: 90vh;
-  background: linear-gradient(to top, #aaaaaa, #ffffff); /* Define o degradê vertical */
 }
 
 .bloco_esquerdo_principal_destaque{
@@ -238,7 +243,7 @@ header {
 }
 
 .titulo_esquerdo_principal_destaque{
-  color: #007bff;
+  color: #333333;
   margin-left: 200px;
   font-family: RedhatDisplayBoldItalic, sans-serif;
   text-transform: uppercase;
@@ -270,8 +275,117 @@ header {
   opacity: 1;
   transition: opacity 0.5s ease-in-out;
 }
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=. */
+/* -=-=-=-=-=-=-=-=-=-=-=-= PORQUE LAR DOCE LAR =-=-=-=-=-=-=-=-=-=-=-=-=. */
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=. */
+
+#section_porque_lardocelar{
+  height: 100vh;
+  background: linear-gradient(to bottom, #aaaaaa, #ffffff); /* Define o degradê vertical */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#bloco_geral_porque{
+  background-color: #fff;
+  width: 80vw;
+  height: 80vh;
+  border-radius: 40px;
+}
+
+#bloco_desc_porque{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 150px;
+}
+
+#titulo_porque{
+  font-family: RedhatDisplayMediumItalic, sans-serif;
+  text-transform: uppercase;
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+#subtitulo_porque{
+  font-family: RedhatDisplayLightItalic, sans-serif;
+  width: 700px;
+  text-align: center;
+  font-size: 20px
+}
+
+#bloco_fotos_porque {
+  position: relative;
+}
+
+#imagem_casanova1{
+  position: absolute;
+  width: 350px; /* Garante que a imagem cubra todo o container */
+  height: auto; /* Mantém a proporção da imagem */
+  top: 130px;
+  left: 130px;
+  border-radius: 30px;
+}
+
+
+#imagem_casanova2 {
+  position: absolute;
+  width: 350px; /* Garante que a imagem cubra todo o container */
+  height: auto; /* Mantém a proporção da imagem */
+  top: 30px;
+  left: 30px;
+  border-radius: 30px;
+}
+
+#imagem_casanova2 {
+  position: absolute;
+  width: 350px; /* Garante que a imagem cubra todo o container */
+  height: auto; /* Mantém a proporção da imagem */
+  top: 0px;
+  left: 80px;
+  border-radius: 30px;
+}
+
+#imagem_casanova3 {
+  position: absolute;
+  width: 350px; /* Garante que a imagem cubra todo o container */
+  height: auto; /* Mantém a proporção da imagem */
+  top: 90px;
+  left: 30px;
+  border-radius: 30px;
+}
+
+#imagem_casanova4 {
+  position: absolute;
+  width: 350px; /* Garante que a imagem cubra todo o container */
+  height: auto; /* Mantém a proporção da imagem */
+  top: 30px;
+  left: 30px;
+  border-radius: 30px;
+}
+
+#imagem_casanova5 {
+  position: absolute;
+  width: 350px; /* Garante que a imagem cubra todo o container */
+  height: auto; /* Mantém a proporção da imagem */
+  top: 30px;
+  left: 30px;
+  border-radius: 30px;
+}
+
+#imagem_casanova6 {
+  position: absolute;
+  width: 350px; /* Garante que a imagem cubra todo o container */
+  height: auto; /* Mantém a proporção da imagem */
+  top: 30px;
+  left: 30px;
+  border-radius: 30px;
+}
 
 footer{
-  height: 100vh;
-  background-color: #4ff;
+  height: 100px;
+  background-color: rgb(0, 139, 231);
 }
