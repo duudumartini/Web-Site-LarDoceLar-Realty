@@ -1,0 +1,586 @@
+@font-face {
+  font-family: RedHatDisplayLightItalic;
+  src: url('Index/css/RedHatDisplayLightItalic.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: RedhatDisplayMediumItalic;
+  src: url('Index/css/RedHatDisplayMediumItalic.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: RedhatDisplayBoldItalic;
+  src: url('Index/css/RedHatDisplayBoldItalic.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: Ananda;
+  src: url('Index/css/Ananda Personal Use.ttf') format('truetype');
+}
+
+
+
+body{
+  width: 100vw;
+  overflow-x: hidden; 
+}
+
+
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=. */
+/* -=-=-=-=-=-=-=-=-=-=-=-=- MENU SUPERIOR -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=. */
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=. */
+
+header {
+  z-index: 99999;
+  background-color:  white;
+  width: 480px;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  right: 0px;
+  top: 0px;
+  border-bottom-left-radius: 30px;
+  box-shadow: 0px 10px 5px rgba(0, 0, 0, 0.39); /* Adicionando sombra */
+  transition: 0.8s ease-in-out;
+}
+
+#contatos {
+  display: flex;
+  justify-content: center;
+  transition: 0.3s ease-in-out;
+}
+
+.contatos_cabecalho {
+  display: flex;
+  align-items: center;
+  margin-left: 40px;
+  justify-content: center;
+}
+
+.icone_cabecalho{
+  width: 30px;
+}
+
+.info_telefone_cabecalho{
+  margin-left: 10px;
+}
+
+
+#icone_whatsapp_cabecalho {
+  width: 20px;
+}
+
+.telefones_cabecalho {
+  font-family: RedHatDisplayLightItalic, sans-serif;
+  margin-bottom: 4px;
+  text-align: center;
+}
+
+.info_telefones_cabecalho{
+  font-size: 12px;
+  align-items: center;
+  text-align: center;
+}
+
+#icone_login {
+  width: 40px;
+  margin: 10px;
+  cursor: pointer;
+}
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=. */
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=- BLOCO LOGIN -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=. */
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=. */
+
+#section_login {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  display: none;
+  z-index: 1;
+  justify-content: center;
+  align-items: center;
+  opacity: 0.97;
+  background: linear-gradient(270deg, #001c34, #005dac, #006269, #0d0074);
+  background-size: 800% 800%;
+  -webkit-animation: AnimationName 20s ease-in-out infinite;
+  -moz-animation: AnimationName 20s ease-in-out infinite;
+  animation: AnimationName 20s ease-in-out infinite;
+}
+
+
+@-webkit-keyframes AnimationName {
+  0%{background-position:0% 50%}
+  50%{background-position:100% 50%}
+  100%{background-position:0% 50%}
+}
+@-moz-keyframes AnimationName {
+  0%{background-position:0% 50%}
+  50%{background-position:100% 50%}
+  100%{background-position:0% 50%}
+}
+@keyframes AnimationName {
+  0%{background-position:0% 50%}
+  50%{background-position:100% 50%}
+  100%{background-position:0% 50%}
+}
+
+#subbloco_section_login{
+  display: flex;
+  box-shadow: 0px 0px 10px 5px rgb(0, 13, 71);
+  border-radius: 30px;
+}
+
+#subbloco_section_login img{
+  display: flex;
+  width: 400px;
+  height: 400px;
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+}
+
+#bloco_login_senha{
+  align-items: center;
+  justify-content: center;
+  background-color: #006ce0;
+  display: flex;
+  width: 400px;
+  flex-direction: column;
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
+}
+
+#bloco_login_senha input[type="text"]{
+  margin-top: 100px;
+}
+
+#bloco_login_senha input[type="text"],
+#bloco_login_senha input[type="password"] {
+    background-repeat: no-repeat;
+    background-position: 240px center;
+    background-size: 20px;
+    width: 250px;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#btn_login {
+  font-family: RedhatDisplayMediumItalic, sans-serif;
+  transition: all 0.2s ease-in-out;
+  text-align: center;
+  text-decoration: none;
+  margin-top: 10px;
+  width: 300px;
+  padding: 10px;
+  border: none;
+  border-radius: 20px;
+  background-color: #003670;
+  color: #fff;
+  cursor: pointer;
+}
+
+#btn_login:hover {
+    background-color: #006ea1;
+    scale: 1.1;
+    box-shadow: 0px 0px 10px 5px rgb(0, 0, 0);
+}
+
+#btn_fechar{
+  font-family: RedhatDisplayMediumItalic, sans-serif;
+  transition: all 0.2s ease-in-out;
+  margin-top: 70px;
+  width: 100px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #09005e;
+  color: #fff;
+  cursor: pointer;
+}
+
+#btn_fechar:hover {
+  scale: 1.1;
+  box-shadow: 0px 0px 10px 5px rgb(0, 0, 0);
+  background-color: #ff0000;
+}
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=. */
+/* -=-=-=-=-=-=-=-=-=-=-=-= BANNER PRINCIPAL -=-=-=-=-=-=-=-=-=-=-=-=-=-=. */
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=. */
+
+#section_banner_principal {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-size: cover;
+  background-position: center;
+  width: 100vw;
+  height: 100vh;
+  margin-bottom: 15px;
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.39);
+}
+
+#titulo_banner{
+  color: rgb(73, 73, 73);
+  font-family: Ananda, sans-serif;
+  font-size: 5vw;
+  font-weight: 800;
+  margin-bottom: 10px;
+  opacity: 0;
+  transition: opacity 2s ease-in-out;
+}
+
+#sub_banner{
+  color: rgb(73, 73, 73);
+  font-family: RedhatDisplayMediumItalic, sans-serif;
+  font-size: 1.5vw;
+  margin-bottom: 70px;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+#bloco_pesquisa{
+  justify-content: space-around;
+  display: flex;
+  align-items: center;
+  background-color: rgb(241,241,241);
+  width: 70vw;
+  height: 100px;
+  border-radius: 20px;
+  box-shadow: 0px 10px 5px rgba(0, 0, 0, 0.39); 
+}
+
+.combobox_banner {
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  color: #333;
+  width: 15vw; 
+}
+
+#campo_pesquisa {
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  color: #333;
+  width: 20vw; 
+}
+
+#botao_pesquisar {
+  font-family: RedhatDisplayMediumItalic, sans-serif;
+  padding: 10px 20px; 
+  font-size: 16px;
+  border-radius: 5px;
+  border: none;
+  background-color: #007bff; 
+  color: #fff; 
+  cursor: pointer; 
+  transition: background-color 0.3s ease-in-out,
+              color 0.3s ease-in-out,
+              box-shadow 0.3s ease-in-out;
+}
+
+#botao_pesquisar:hover{
+  background-color: burlywood;
+  color: #333;
+  box-shadow: 0px 5px 5px rgb(0,123,255); 
+}
+
+
+#section_destaques{
+  height: 100vh;
+  background: linear-gradient(to top, #aaaaaa, #ffffff); /* Define o degradê vertical */
+}
+
+#slider li{
+  transition: opacity 0.5s ease-in-out;
+}
+
+.bloco_cabecalho_destaque{
+  height: 100px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.bloco_endereco_destaque{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.endereco_destaque{
+  font-family: RedhatDisplayMediumItalic, sans-serif;
+  color: #333;
+  font-size: 16px;
+}
+
+.cidade_destaque{
+  font-family: RedhatDisplayMediumItalic, sans-serif;
+  color: #333;
+  font-size: 14px;
+}
+
+.bloco_info_cabecalho{
+  display: flex;
+}
+
+.bloco_info{
+  display: flex;
+  align-items: center;
+  margin-left: 30px;
+}
+
+.descricao_info_destaque{
+  font-family: RedhatDisplayMediumItalic, sans-serif;
+  color: #333;
+  margin-left: 10px;
+}
+
+.icone_destaques{
+  width: 40px;
+  height: 40px;
+}
+
+.bloco_principal_destaque{
+  display: flex;
+  justify-content: space-evenly;
+  height: 90vh;
+}
+
+.bloco_esquerdo_principal_destaque{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.titulo_empreendimento_destaque{
+  font-size: 50px;
+  color: #333;
+  font-family: Ananda, sans-serif;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.titulo_esquerdo_principal_destaque{
+  color: #333333;
+  margin-left: 200px;
+  font-family: RedhatDisplayBoldItalic, sans-serif;
+  text-transform: uppercase;
+  font-size: 32px;
+  width: 250px;
+  text-align: end;
+}
+
+.desc_esquerdo_principal_destaque{
+  color: #333;
+  font-family: RedhatDisplayLightItalic, sans-serif;
+  font-size: 20px;
+  width: 400px;
+  text-align: start;
+}
+
+.bloco_direito_principal_destaque{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.bloco_direito_principal_destaque img{
+  width: 612px;
+  height: 408px;
+  border-radius: 30px;
+  box-shadow: 0px 0px 55px rgb(0, 0, 0);
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+}
+
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=. */
+/* -=-=-=-=-=-=-=-=-=-=-=-= PORQUE LAR DOCE LAR =-=-=-=-=-=-=-=-=-=-=-=-=. */
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=. */
+
+#section_porque_lardocelar{
+  height: 100vh;
+  background: linear-gradient(to bottom, #aaaaaa, #ffffff); /* Define o degradê vertical */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#bloco_geral_porque {
+  background-color: #e2e2e2;
+  width: 80vw;
+  height: 80vh;
+  border-radius: 40px;
+  box-shadow: 0px 0px 30px rgb(0, 0, 0);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+
+#bloco_desc_porque{
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 150px;
+}
+
+#titulo_porque{
+  color: white;
+  font-family: RedhatDisplayMediumItalic, sans-serif;
+  text-transform: uppercase;
+  font-size: 30px;
+  margin-bottom: 10px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+#subtitulo_porque{
+  color: white;
+  font-family: RedhatDisplayLightItalic, sans-serif;
+  width: 700px;
+  text-align: center;
+  font-size: 20px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  letter-spacing: 0.5px;
+}
+
+#bloco_fotos_porque {
+  position: relative;
+}
+
+.imagem_casanova {
+  position: absolute;
+  width: 20vw; /* Garante que a imagem cubra todo o container */
+  height: auto; /* Mantém a proporção da imagem */
+  border-radius: 30px;
+  transition: opacity 2s ease-in-out;
+  opacity: 0;
+  box-shadow: 0px 0px 50px rgb(0, 0, 0);
+}
+
+#imagem_casanova1 {
+  top: 130px;
+  left: 130px;
+}
+
+#imagem_casanova2 {
+  top: 0px;
+  left: 80px;
+}
+
+#imagem_casanova3 {
+  top: 90px;
+  left: 30px;
+}
+
+#imagem_casanova4 {
+  top: 210px;
+  left: 90px;
+}
+
+#imagem_casanova5 {
+  top: 90px;
+  left: 210px;
+}
+
+#imagem_casanova6 {
+  top: 140px;
+  left: 180px;
+}
+
+#bloco_fotos_e_itens{
+  display: flex;
+  justify-content: space-between;
+
+}
+
+#bloco_itens_porque{
+  display: flex;
+  flex-direction: column;
+  width: 600px;
+  height: 400px;
+  justify-content: space-around;
+}
+
+.item_titulo_porque{
+  color: white;
+  margin-bottom: 10px;
+  font-family: RedhatDisplayMediumItalic, sans-serif;
+}
+
+.item_desc_porque {
+  color: white;
+  font-family: 'RedhatDisplayLightItalic', sans-serif;
+  text-align: justify;
+  width: 450px;
+  margin-left: 50px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  letter-spacing: 0.5px;
+  line-height: 1.6;
+}
+
+
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=. */
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=- FOOTER -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=. */
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=. */
+
+footer {
+  background-color: #555555;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  bottom: 0;
+  width: 100%;
+}
+footer .footer-content {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+footer .footer-content h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  font-family: RedhatDisplayMediumItalic, sans-serif;
+}
+footer .footer-content .social-media {
+  margin: 10px 0;
+}
+footer .footer-content .social-media a {
+  margin-top: 20px;
+  font-family: RedhatDisplayMediumItalic, sans-serif;
+  margin: 0 10px;
+  color: #fff;
+  text-decoration: none;
+}
+footer .footer-content .social-media a:hover {
+  text-decoration: underline;
+}
+footer .footer-links {
+  margin: 10px 0;
+}
+footer .footer-links a {
+  font-family: RedhatDisplayLightItalic, sans-serif;
+  margin: 0 15px;
+  color: #fff;
+  text-decoration: none;
+}
+footer .footer-links a:hover {
+  text-decoration: underline;
+}
+footer .footer-bottom {
+  margin-top: 10px;
+}
