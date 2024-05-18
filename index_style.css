@@ -18,6 +18,11 @@
   src: url('Index/css/Ananda Personal Use.ttf') format('truetype');
 }
 
+@font-face {
+  font-family: Dancing;
+  src: url('Index/css/DancingScript-VariableFont_wght.ttf') format('truetype');
+}
+
 
 
 body{
@@ -272,6 +277,13 @@ header {
   width: 20vw; 
 }
 
+#bloco_botoes_pesquisar{
+  width: 240px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 #botao_pesquisar {
   font-family: RedhatDisplayMediumItalic, sans-serif;
   padding: 10px 20px; 
@@ -291,7 +303,6 @@ header {
   color: #333;
   box-shadow: 0px 5px 5px rgb(0,123,255); 
 }
-
 
 #section_destaques{
   height: 100vh;
@@ -379,6 +390,7 @@ header {
 }
 
 .desc_esquerdo_principal_destaque{
+  margin-bottom: 50px;
   color: #333;
   font-family: RedhatDisplayLightItalic, sans-serif;
   font-size: 20px;
@@ -396,6 +408,7 @@ header {
 .bloco_direito_principal_destaque img{
   width: 612px;
   height: 408px;
+  margin-bottom: 100px;
   border-radius: 30px;
   box-shadow: 0px 0px 55px rgb(0, 0, 0);
   opacity: 1;
@@ -403,131 +416,196 @@ header {
 }
 
 /* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=. */
-/* -=-=-=-=-=-=-=-=-=-=-=-= PORQUE LAR DOCE LAR =-=-=-=-=-=-=-=-=-=-=-=-=. */
+/* -=-=-=-=-=-=-=-=-=-=-=-= BLOCO DE BAIRROS =-=-=-=-=-=-=-=-=-=-=-=-=. */
 /* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=. */
 
-#section_porque_lardocelar{
-  height: 100vh;
-  background: linear-gradient(to bottom, #aaaaaa, #ffffff); /* Define o degradê vertical */
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+#section_bairros{
+  border: 5px solid rgb(104, 104, 104);
+  width: 100vw;
+  height: 30vh;
 }
 
-#bloco_geral_porque {
-  background-color: #e2e2e2;
-  width: 80vw;
-  height: 80vh;
-  border-radius: 40px;
-  box-shadow: 0px 0px 30px rgb(0, 0, 0);
+#conjunto_bairros {
+  display: flex;
+  justify-content: space-between;
+}
+
+.bloco_bairro {
+  height: 30vh;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center; /* para centralizar o texto */
+  /* border: 1px solid #333; opcional, para visualização */
+  box-sizing: border-box; /* para incluir padding e border no cálculo da largura */
+  transition: scale 0.2s ease-in-out, filter 0.5s ease-in-out; /* combina as transições */
   background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
+  filter: grayscale(70%);
 }
 
+.bloco_bairro:hover{
+  z-index: 1;
+  scale: 1.1;
+  cursor: pointer;
+}
 
-#bloco_desc_porque{
+.bloco_bairro h1{
+  font-size: 20px;
+  margin-top: 60px;
   color: white;
+  text-shadow: 1px 1px 0 #000;
+}
+
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=. */
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=- OFERTAS -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=. */
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=. */
+
+#section_ofertas{
+  background: linear-gradient(to bottom, #aaaaaa, #ffffff); /* Define o degradê vertical */
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+}
+
+#bloco_titulo_ofertas{
+  width: 100vw;
+  height: 150px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 150px;
 }
 
-#titulo_porque{
+#titulo_ofertas{
+  margin-top: 50px;
+  cursor: default;
+  color: rgb(85, 85, 85);
+  text-shadow: 1px 1px 1px rgb(0, 0, 0);
+  font-size: 50px;
+  font-family: Dancing, sans-serif;
+}
+
+#ver_mais {
+  display: inline-block;
+  margin-top: 40px;
+  padding: 10px 20px;
+  font-size: 16px;
   color: white;
-  font-family: RedhatDisplayMediumItalic, sans-serif;
-  text-transform: uppercase;
-  font-size: 30px;
-  margin-bottom: 10px;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  background-color: rgb(255, 166, 0);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-#subtitulo_porque{
-  color: white;
-  font-family: RedhatDisplayLightItalic, sans-serif;
-  width: 700px;
-  text-align: center;
-  font-size: 20px;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
-  letter-spacing: 0.5px;
+#ver_mais:hover {
+  background-color: rgb(255, 201, 101);
+  transform: scale(1.05);
 }
 
-#bloco_fotos_porque {
+#conjunto_blocos_ofertas{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.bloco_oferta{
+  cursor: pointer;
+  border-radius: 20px;
+  width: 25vw;
+  margin: 50px;
+  box-shadow: 0 0 10px 1px black;
+  transition: scale 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.bloco_oferta:hover{
+  scale: 1.02;
+  box-shadow: 0 0 25px 4px black;
+}
+
+.sub_bloco_foto_oferta{
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  height: 30vh;
+  background-size: cover;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
   position: relative;
 }
 
-.imagem_casanova {
+.preco_bloco_oferta{
+  background-color: rgb(255, 166, 0);
+  padding: 7px;
+  box-shadow: 0 0 10px 1px black;
+  text-shadow: 2px 2px 2px rgb(255, 218, 115);
+  border-radius: 10px;
+  color: rgb(0, 0, 0);
   position: absolute;
-  width: 20vw; /* Garante que a imagem cubra todo o container */
-  height: auto; /* Mantém a proporção da imagem */
-  border-radius: 30px;
-  transition: opacity 2s ease-in-out;
-  opacity: 0;
-  box-shadow: 0px 0px 50px rgb(0, 0, 0);
+  bottom: -15px;
+  right: 10px;
+  font-size: 25px;
 }
 
-#imagem_casanova1 {
-  top: 130px;
-  left: 130px;
-}
-
-#imagem_casanova2 {
-  top: 0px;
-  left: 80px;
-}
-
-#imagem_casanova3 {
-  top: 90px;
-  left: 30px;
-}
-
-#imagem_casanova4 {
-  top: 210px;
-  left: 90px;
-}
-
-#imagem_casanova5 {
-  top: 90px;
-  left: 210px;
-}
-
-#imagem_casanova6 {
-  top: 140px;
-  left: 180px;
-}
-
-#bloco_fotos_e_itens{
-  display: flex;
-  justify-content: space-between;
-
-}
-
-#bloco_itens_porque{
+.sub_bloco_desc1_oferta{
+  height: 15vh;
+  background: linear-gradient(to top, #cacaca, #ffffff); 
   display: flex;
   flex-direction: column;
-  width: 600px;
-  height: 400px;
-  justify-content: space-around;
+  align-items: center;
+  justify-content: space-evenly;
 }
 
-.item_titulo_porque{
-  color: white;
-  margin-bottom: 10px;
-  font-family: RedhatDisplayMediumItalic, sans-serif;
+.codigo_bloco_oferta{
+  margin-top: 20px;
+  font-family: RedhatDisplayLightItalic, sans-serif;
+  font-size: 14px;
 }
 
-.item_desc_porque {
-  color: white;
-  font-family: 'RedhatDisplayLightItalic', sans-serif;
-  text-align: justify;
-  width: 450px;
-  margin-left: 50px;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
-  letter-spacing: 0.5px;
-  line-height: 1.6;
+.sub_bloco_desc1_endereco{
+  display: flex;
+  flex-direction: row;
+}
+
+.ic_desc1_oferta{
+  width: 13px;
+  height: 13px;
+}
+
+.endereco_bloco_oferta{
+  font-family: RedhatDisplayLightItalic, sans-serif;
+  margin-left: 5px;
+}
+
+.sub_bloco_desc2_oferta{
+  height: 15vh;
+  background: linear-gradient(to bottom, #cacaca, #ffffff); 
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.sub_bloco_desc2{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.img_desc2_oferta{
+  width: 30px;
+}
+
+.sub_bloco_mais_detalhes{
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 6vh;
+  background-color: #000;
+  background: linear-gradient(to top, #f1c055, #ff9633); 
 }
 
 

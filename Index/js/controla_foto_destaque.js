@@ -1,19 +1,19 @@
 var imagens_destaque1 = [
-    "Index/Fotos Empreendimentos/prédio 1/3.jpg",
-    "Index/Fotos Empreendimentos/prédio 1/2.jpg",
-    "Index/Fotos Empreendimentos/prédio 1/1.jpg"
+    "Index/Fotos-Empreendimentos/prédio 1/3.jpg",
+    "Index/Fotos-Empreendimentos/prédio 1/2.jpg",
+    "Index/Fotos-Empreendimentos/prédio 1/1.jpg"
   ];
   
 var imagens_destaque2 = [
-    "Index/Fotos Empreendimentos/casa 1/3.jpg",
-    "Index/Fotos Empreendimentos/casa 1/2.jpg",
-    "Index/Fotos Empreendimentos/casa 1/1.jpg"
+    "Index/Fotos-Empreendimentos/casa 1/3.jpg",
+    "Index/Fotos-Empreendimentos/casa 1/2.jpg",
+    "Index/Fotos-Empreendimentos/casa 1/1.jpg"
   ];
 
 var imagens_destaque3 = [
-    "Index/Fotos Empreendimentos/casa 2/3.jpg",
-    "Index/Fotos Empreendimentos/casa 2/2.jpg",
-    "Index/Fotos Empreendimentos/casa 2/1.jpg"
+    "Index/Fotos-Empreendimentos/casa 2/3.jpg",
+    "Index/Fotos-Empreendimentos/casa 2/2.jpg",
+    "Index/Fotos-Empreendimentos/casa 2/1.jpg"
   ];
   
   var indexAtualDestaque1 = 0;
