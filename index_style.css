@@ -1,26 +1,26 @@
 @font-face {
   font-family: RedHatDisplayLightItalic;
-  src: url('Index/css/RedHatDisplayLightItalic.ttf') format('truetype');
+  src: url('Fontes/red-hat-display-2/RedHatDisplayLightItalic.ttf') format('truetype');
 }
 
 @font-face {
   font-family: RedhatDisplayMediumItalic;
-  src: url('Index/css/RedHatDisplayMediumItalic.ttf') format('truetype');
+  src: url('Fontes/red-hat-display-2/RedHatDisplayMediumItalic.ttf') format('truetype');
 }
 
 @font-face {
   font-family: RedhatDisplayBoldItalic;
-  src: url('Index/css/RedHatDisplayBoldItalic.ttf') format('truetype');
+  src: url('Fontes/red-hat-display-2/RedHatDisplayBoldItalic.ttf') format('truetype');
 }
 
 @font-face {
   font-family: Ananda;
-  src: url('Index/css/Ananda Personal Use.ttf') format('truetype');
+  src: url('Fontes/red-hat-display-2/Ananda Personal Use.ttf') format('truetype');
 }
 
 @font-face {
   font-family: Dancing;
-  src: url('Index/css/DancingScript-VariableFont_wght.ttf') format('truetype');
+  src: url('Fontes/red-hat-display-2/DancingScript-VariableFont_wght.ttf') format('truetype');
 }
 
 
