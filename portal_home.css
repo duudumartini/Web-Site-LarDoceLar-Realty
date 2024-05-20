@@ -12,6 +12,11 @@
     font-family: RedhatDisplayBoldItalic;
     src: url('Fontes/red-hat-display-2/RedHatDisplayBoldItalic.ttf') format('truetype');
 }
+
+@font-face {
+    font-family: RedhatDisplayItalic;
+    src: url('Fontes/red-hat-display-2/RedHatDisplayItalic.ttf') format('truetype');
+}
   
 @font-face {
     font-family: Ananda;
@@ -23,9 +28,18 @@
     src: url('Fontes/red-hat-display-2/DancingScript-VariableFont_wght.ttf') format('truetype');
 }
 
+/*
+--rich-black: #00111Dff;
+--battleship-gray: #898684ff;
+--platinum: #E4E4E4ff;
+--celestial-blue: #4092CBff;
+--indigo-dye: #1C4867ff;
+https://coolors.co/00111d-898684-e4e4e4-4092cb-1c4867*/
+
 body{
     width: 100vw;
-    overflow-x: hidden; 
+    overflow-x: hidden;
+    background-color: #00111d;
 }
 
 /* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=. */
@@ -33,100 +47,68 @@ body{
 /* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=. */
 
 header{
-    background-color: #dadada;
+    background-color: #00111d;
     width: 100vw;
-    height: 50vh;
+    height: 55vh;
+    position: relative;
 }
 
 #bloco_background_header {
-    position: relative; /* Para posicionar corretamente o pseudo-elemento */
     background-size: cover;
     background-position: center;
     width: 100vw;
     height: 35vh;
-    border-bottom-left-radius: 10vw;
-    border-bottom-right-radius: 10vw;
-    box-shadow: 0 0 10px 1px black;
-    overflow: hidden; /* Para garantir que o pseudo-elemento não saia dos limites do contêiner */
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
 }
 
 #bloco_background_header::before {
-    content: '';
+    content: "";
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(45deg, rgba(255, 166, 0, 0.411), rgba(84, 187, 255, 0.5));
-    z-index: 1; /* Coloca o gradiente acima do background do elemento principal */
-    pointer-events: none; /* Para garantir que o pseudo-elemento não interfira nas interações do usuário */
-    border-bottom-left-radius: 10vw;
-    border-bottom-right-radius: 10vw;
-}
-
-#bloco_superior_header{
-    margin: 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
+    background: linear-gradient(to bottom, #47bbff9d, #00111d);
+    pointer-events: none;
 }
 
 #titulo_lardocelar_header{
     font-family: Ananda, sans-serif;
-    font-size: 30px;
-    color: rgb(122, 122, 122);
-    text-shadow: 1px 1px 1px rgb(0, 0, 0);
-
+    font-size: 50px;
+    color: #DFE0E2;
+    text-shadow: 6px 6px 2px rgb(0, 0, 0);
+    top: 15vh;
+    position: absolute;
+    cursor:default;
 }
 
-#subbloco_superior_header_botoes{
-    display: flex;
-    width: 200px;
-    justify-content: space-around;
-}
-
-.botao_superior_header a{
-    color: black;
-    text-decoration: none;
+#bemvindo_lardocelar_header{
     font-family: RedhatDisplayMediumItalic, sans-serif;
-    font-size: 18px;
-}
-
-#bloco_info_header{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-#bem_vindo_header{
-    font-size: 26px;
-    font-family: RedhatDisplayMediumItalic, sans-serif;
-    margin-top: 20px;
-    margin-bottom: 50px;
-}
-
-#frase_header{
-    font-family: RedhatDisplayBoldItalic, sans-serif;
-    width: 60vw;
-    text-align: center;
-    font-size: 18px;
-    text-shadow: 1px 1px 1px rgb(255, 255, 255);
+    font-size: 20px;
+    color: #4092CB;
+    text-shadow: 6px 6px 2px rgb(0, 0, 0);
+    top: 24vh;
+    position: absolute;
+    cursor:default;
 }
 
 #bloco_botoes_header{
     display: flex;
     justify-content: space-around;
     align-items: center;
-    height: 15vh;
+    height: 20vh;
 }
 
 .botoes_header{
     cursor: pointer;
     border: 1px solid black;
     display: flex;
-    background-color: #e4e4e4;
+    background-color: #1C4867;
     box-shadow: 0px 0px 5px black;
     border-radius: 20px;
     flex-direction: column;
@@ -140,16 +122,18 @@ header{
 .botoes_header img{
     width: 50px;
     filter: grayscale(100%);
-    transition: filter 0.2s ease-in-out;
+    transition: filter 0.2s ease-in-out, color 0.2s ease-in-out;
 }
 
 .botoes_header h1{
+    font-family: RedhatDisplayMediumItalic, sans-serif;
+    color: #E4E4E4;
     text-align: center;
 }
 
 .botoes_header:hover {
     scale: 1.1;
-    background-color: rgb(255, 166, 0);
+    background-color: #4092CB;
 }
 
 
@@ -157,3 +141,125 @@ header{
     filter: grayscale(0%);
 }
 
+.botoes_header:hover h1 {
+    color: #00111D;
+}
+
+
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=. */
+/* -=-=-=-=-=-=-=-=-=--=-=- CADASTRAR IMOVEL -=-=-=-=-=-=-=-=-=-=-=-=-=-=. */
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=. */
+
+.titulo_sections{
+    color:#DFE0E2;
+    margin-bottom: 50px;
+    text-transform: uppercase;
+    font-family: RedhatDisplayMediumItalic, sans-serif;
+    font-size: 30px;
+}
+
+.subtitulos_cadastrar{
+    color:#DFE0E2;
+    text-transform: uppercase;
+    font-family: RedhatDisplayLightItalic, sans-serif;
+    font-size: 20px;
+    margin-top: 50px;
+}
+
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=. */
+/* -=-=-=-=-=-=-=-=-=--=-=- CADASTRAR IMOVEL -=-=-=-=-=-=-=-=-=-=-=-=-=-=. */
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=. */
+
+#section_cadastrar_imovel{
+    margin: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+#form_cadastrar_imovel {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    position:relative;
+}
+
+.form-group.full-width {
+    grid-column: span 3;
+}
+
+label {
+    font-family: RedhatDisplayMediumItalic, sans-serif;
+    color:#E4E4E4;
+    margin-left: 10px;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input, textarea, select {
+    font-size: 16px;
+    padding: 10px;
+    border: 1px solid #4092CB;
+    background-color: #1C4867;
+    color:#DFE0E2;
+    border-radius: 10px;
+    width: 100%;
+    font-family: RedhatDisplayItalic, sans-serif;
+    box-sizing: border-box;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    background-color: #4CAF50;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    width: 100%;
+}
+
+button:hover {
+    background-color: #ff0000;
+}
+
+#subtitulo_informacoes_gerais_cadastrar{ grid-column: 1/ 1; grid-row: 1/1; grid-column: span 3;}
+#titulo_cadastrar { grid-column: 1 / 2; grid-row: 2/2; grid-column: span 2;}
+#tipo_cadastrar { grid-column: 3 / 3; grid-row: 2/2;}
+#preco_cadastar { grid-column: 1 / 1; grid-row: 3/3;}
+#area_cadastrar { grid-column: 2 / 2; grid-row: 3/3;}
+#vagas_cadastrar { grid-column: 3 / 3; grid-row: 3/3;}
+#quartos_cadastrar { grid-column: 1 / 1; grid-row: 4/4;}
+#banheiros_cadastrar { grid-column: 2 / 2; grid-row: 4/4;}
+
+#descricao_cadastrar { grid-column: 1 / 3; grid-row: 5/5; grid-column: span 3}
+
+#subtitulo_endereco_cadastrar{ grid-column: 1/ 1; grid-row: 6/6; grid-column: span 3}
+#cep_cadastrar { grid-column: 1 / 1; grid-row: 7/7;}
+#endereco_cadastrar { grid-column: 1 / 1; grid-row: 8/8;}
+#cidade_cadastrar { grid-column: 2 / 2; grid-row: 8/8;}
+#estado_cadastrar { grid-column: 3 / 3; grid-row: 8/8;}
+
+#titulo_dados_proprietario_cadastrar{ grid-column: 1 / 1; grid-row: 9/9; grid-column: span 3}
+#proprietario_nome_cadastrar{ grid-column: 1 / 1; grid-row: 10/10;}
+#proprietario_sobrenome_cadastrar{ grid-column: 2 / 2; grid-row: 10/10;}
+#proprietario_CPF_cadastrar{ grid-column: 3 / 3; grid-row: 10/10;}
+#proprietario_telefone_cadastrar{ grid-column: 1 / 1;  grid-row: 11/11;}
+#proprietario_email_cadastrar{ grid-column: 2 / 2; grid-row: 11/11;}
+
+#titulo_fotos_cadastrar{ grid-column: 1 / 1; grid-row: 12/12; grid-column: span 3}
+
+#foto1_cadastrar { grid-column: 1 / 1; grid-row: 13/13;}
+#foto2_cadastrar{ grid-column: 2 / 2; grid-row: 13/13;}
+#foto3_cadastrar{ grid-column: 3 / 4; grid-row: 13/13;}
+
+#full-width { grid-column: 1 / 1; grid-row: 14/14;}

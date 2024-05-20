@@ -10,42 +10,140 @@
 </head>
 <body id="corpo">
     <header>
-        <div id="bloco_background_header" style="background-image: url(Index/Imagens/ft_banner_principal.jpg);">
-            <div id="bloco_superior_header">
-                <h1 id="titulo_lardocelar_header">Lar Doce Lar - Realty</h1>
-                <div id="subbloco_superior_header_botoes">
-                    <h1 class="botao_superior_header"><a href="">Meus Dados</a></h1>
-                    <h1 class="botao_superior_header"><a href="index.html">Sair</a></h1>
-                </div>
-
-            </div>
-            <div id="bloco_info_header">
-                <h1 id="bem_vindo_header"> Bem vindo(a) Eduardo Deon Martini</h1>
-                <p id="frase_header">"Transformar espaços vazios em lares acolhedores é mais do que um trabalho – é um dom. Continue acreditando no poder das suas ações e no impacto positivo que você traz para a vida das pessoas."</p>
-            </div>
+        <div id="bloco_background_header" style="background-image: url(Portal-Home/Imagens/ft_header.jpg);">
+            <h1 id="titulo_lardocelar_header">Lar Doce Lar - Realty</h1>
+            <h2 id="bemvindo_lardocelar_header">Bem vindo - Eduardo Deon Martini</h2>
         </div>
         <div id="bloco_botoes_header">
             <div class="botoes_header">
-                <img src="Portal Home/Imagens/ic_casa.png" alt="Icone Adicionar Imóvel">
+                <img src="Portal-Home/Imagens/ic_casa.png" alt="Icone Adicionar Imóvel">
                 <h1>Cadastar Imóvel</h1>
             </div>
             <div class="botoes_header">
-                <img src="Portal Home/Imagens/ic_novo_usuario.png" alt="Icone Adicionar Funcionário">
+                <img src="Portal-Home/Imagens/ic_novo_usuario.png" alt="Icone Adicionar Funcionário">
                 <h1>Cadastar Funcionário</h1>
             </div>
             <div class="botoes_header">
-                <img src="Portal Home/Imagens/ic_vendas_gerais.png" alt="Icone Relatorio de Vendas">
+                <img src="Portal-Home/Imagens/ic_vendas_gerais.png" alt="Icone Relatorio de Vendas">
                 <h1>Relatorio de Vendas</h1>
             </div>
             <div class="botoes_header">
-                <img src="Portal Home/Imagens/ic_minhas_vendas.png" alt="Icone Minhas Vendas">
+                <img src="Portal-Home/Imagens/ic_minhas_vendas.png" alt="Icone Minhas Vendas">
                 <h1>Minhas Vendas</h1>
             </div>
             <div class="botoes_header">
-                <img src="Portal Home/Imagens/ic_funcionarios.png" alt="Icone Funcionários">
+                <img src="Portal-Home/Imagens/ic_funcionarios.png" alt="Icone Funcionários">
                 <h1>Ver Funcionários</h1>
+            </div>
+            <div class="botoes_header">
+                <img src="Portal-Home/Imagens/ic_meus_dados.png" alt="Icone Meus Dados">
+                <h1>Meus Dados</h1>
+            </div>
+            <div class="botoes_header"><a href="index.html">
+                <img src="Portal-Home/Imagens/ic_sair.png" alt="Icone sair">
+                <h1>Sair</h1></a>
             </div>
         </div>
     </header>
+    <section id="section_cadastrar_imovel">
+        <h1 class="titulo_sections">Cadastrar Imóvel</h1>
+        <form id="form_cadastrar_imovel" action="/submit_imovel" method="post">
+            <h1 class="subtitulos_cadastrar" id="subtitulo_informacoes_gerais_cadastrar">Informações do Imóvel:</h1>
+            <div class="form-group" id="titulo_cadastrar">
+                <label for="titulo">Título do Imóvel:</label>
+                <input type="text" id="titulo" name="titulo" placeholder="Ex: Casa com Vista para o Mar" required>
+            </div>
+            <div class="form-group" id="preco_cadastar">
+                <label for="preco">Preço:</label>
+                <div class="input-group">
+                    <input type="number" id="preco" name="preco" placeholder="Ex: 500000" required>
+                </div>
+            </div>
+            <div class="form-group" id="descricao_cadastrar">
+                <label for="descricao">Descrição do imóvel:</label>
+                <textarea id="descricao" name="descricao" rows="4" placeholder="Descreva o imóvel..." required></textarea>
+            </div>
+            <h1 class="subtitulos_cadastrar" id="subtitulo_endereco_cadastrar">Endereço:</h1>
+            <div class="form-group" id="cep_cadastrar">
+                <label for="cep">CEP:</label>
+                <input type="text" id="cep" name="cep" placeholder="Ex: 12345-678" required>
+            </div>
+            <div class="form-group" id="endereco_cadastrar">
+                <label for="endereco">Endereço:</label>
+                <input type="text" id="endereco" name="endereco" placeholder="Ex: Rua das Flores, 123" required>
+            </div>
+            <div class="form-group" id="cidade_cadastrar">
+                <label for="cidade">Cidade:</label>
+                <input type="text" id="cidade" name="cidade" placeholder="Ex: Rio de Janeiro" required>
+            </div>
+            <div class="form-group" id="estado_cadastrar">
+                <label for="estado">Estado:</label>
+                <input type="text" id="estado" name="estado" placeholder="Ex: RJ" required>
+            </div>
+            <div class="form-group" id="tipo_cadastrar">
+                <label for="tipo">Tipo de Imóvel:</label>
+                <select id="tipo" name="tipo" required>
+                    <option value="casa">Casa</option>
+                    <option value="apartamento">Apartamento</option>
+                    <option value="terreno">Terreno</option>
+                    <option value="comercial">Fazenda</option>
+                </select>
+            </div>
+            <div class="form-group" id="area_cadastrar">
+                <label for="area">Área (m²):</label>
+                <input type="number" id="area" name="area" placeholder="Ex: 120" required>
+            </div>
+            <div class="form-group" id="quartos_cadastrar">
+                <label for="quartos">Número de Quartos:</label>
+                <input type="number" id="quartos" name="quartos" placeholder="Ex: 3" required>
+            </div>
+            <div class="form-group" id="banheiros_cadastrar">
+                <label for="banheiros">Número de Banheiros:</label>
+                <input type="number" id="banheiros" name="banheiros" placeholder="Ex: 2" required>
+            </div>
+            <div class="form-group" id="vagas_cadastrar">
+                <label for="vagas">Número de Vagas de Garagem:</label>
+                <input type="number" id="vagas" name="vagas" placeholder="Ex: 1" required>
+            </div>
+            <h1 class="subtitulos_cadastrar" id="titulo_dados_proprietario_cadastrar">Dados Proprietário:</h1>
+            <div class="form-group" id="proprietario_nome_cadastrar">
+                <label for="proprietario_nome">Proprietário Nome:</label>
+                <input type="text" id="proprietario_nome" name="proprietario_nome" placeholder="Ex: Eduardo" required>
+            </div>
+            <div class="form-group" id="proprietario_sobrenome_cadastrar">
+                <label for="proprietario_sobrenome">Proprietário Sobrenome:</label>
+                <input type="text" id="proprietario_sobrenome" name="proprietario_sobrenome" placeholder="Ex: Deon Martini" required>
+            </div>
+            <div class="form-group" id="proprietario_CPF_cadastrar">
+                <label for="CPF">Proprietário CPF:</label>
+                <input type="number" id="CPF" name="CPF" placeholder="Ex: 07670171920" required>
+            </div>
+            <div class="form-group" id="proprietario_telefone_cadastrar">
+                <label for="telefone">Proprietário Telefone:</label>
+                <input type="number" id="telefone" name="telefone" placeholder="Ex: 47999472753" required>
+            </div>
+            <div class="form-group" id="proprietario_email_cadastrar">
+                <label for="email">Proprietário Email:</label>
+                <input type="text" id="Email name="email" placeholder="Ex: eduardo@email.com" required>
+            </div>
+            <h1 class="subtitulos_cadastrar" id="titulo_fotos_cadastrar">Fotos Imóvel:</h1>
+            <div class="form-group" id="foto1_cadastrar">
+                <label for="foto1">Foto do Imóvel - 1 :</label>
+                <input type="file" id="foto1" name="foto1" accept="image/*" required>
+            </div>
+            <div class="form-group" id="foto2_cadastrar">
+                <label for="foto2">Foto do Imóvel - 2 :</label>
+                <input type="file" id="foto2" name="foto2" accept="image/*" required>
+            </div>
+            <div class="form-group" id="foto3_cadastrar">
+                <label for="foto3">Foto do Imóvel - 3 :</label>
+                <input type="file" id="foto3" name="foto3" accept="image/*" required>
+            </div>
+            <div class="form-group full-width">
+                <button type="submit">Cadastrar Imóvel</button>
+            </div>
+        </form>
+    </section>
+        
 </body>
 </html>
