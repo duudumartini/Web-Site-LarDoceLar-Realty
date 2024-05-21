@@ -6,46 +6,44 @@
     <title>Portal - Lar Doce Lar Realty</title>
 
     <link rel="stylesheet" href="reset.css">
-    <link rel="stylesheet" href="portal_home.css">  
+    <link rel="stylesheet" href="portal_home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body id="corpo">
     <header>
         <div id="bloco_background_header" style="background-image: url(Portal-Home/Imagens/ft_header.jpg);">
             <h1 id="titulo_lardocelar_header">Lar Doce Lar - Realty</h1>
-            <h2 id="bemvindo_lardocelar_header">Bem vindo - Eduardo Deon Martini</h2>
-        </div>
-        <div id="bloco_botoes_header">
-            <div class="botoes_header">
-                <img src="Portal-Home/Imagens/ic_casa.png" alt="Icone Adicionar Imóvel">
-                <h1>Cadastar Imóvel</h1>
-            </div>
-            <div class="botoes_header">
-                <img src="Portal-Home/Imagens/ic_novo_usuario.png" alt="Icone Adicionar Funcionário">
-                <h1>Cadastar Funcionário</h1>
-            </div>
-            <div class="botoes_header">
-                <img src="Portal-Home/Imagens/ic_vendas_gerais.png" alt="Icone Relatorio de Vendas">
-                <h1>Relatorio de Vendas</h1>
-            </div>
-            <div class="botoes_header">
-                <img src="Portal-Home/Imagens/ic_minhas_vendas.png" alt="Icone Minhas Vendas">
-                <h1>Minhas Vendas</h1>
-            </div>
-            <div class="botoes_header">
-                <img src="Portal-Home/Imagens/ic_funcionarios.png" alt="Icone Funcionários">
-                <h1>Ver Funcionários</h1>
-            </div>
-            <div class="botoes_header">
-                <img src="Portal-Home/Imagens/ic_meus_dados.png" alt="Icone Meus Dados">
-                <h1>Meus Dados</h1>
-            </div>
-            <div class="botoes_header"><a href="index.html">
-                <img src="Portal-Home/Imagens/ic_sair.png" alt="Icone sair">
-                <h1>Sair</h1></a>
-            </div>
         </div>
     </header>
-    <section id="section_cadastrar_imovel">
+    <section id="section_menu_lateral">
+        <div id="meu_perfil_menu_lateral">
+            <img id="minha_foto_menu_lateral" src="Portal-Home/Imagens/ft_noimage.jpg" alt="Foto Perfil">
+            <h1 id="nome_usuario_menu_lateral">Eduardo Deon Martini</h1>
+        </div>
+        <div id="bloco_botoes_menu_lateral">
+            <div class="bloco_botao_unico_menu_lateral">
+                <h1 class="botao_lateral" id="botao_home"><a href="index.html">Home</a></h1>
+            </div>
+            <div class="bloco_botao_unico_menu_lateral">
+                <h1 class="botao_lateral" id="botao_cadastrar_imovel">Cadastrar Imovel</h1>
+            </div>
+            <div class="bloco_botao_unico_menu_lateral">
+                <h1 class="botao_lateral" id="botao_buscar_imovel">Buscar Imóvel</h1>
+            </div>
+            <div class="bloco_botao_unico_menu_lateral">
+                <h1 class="botao_lateral" id="botao_vendas">Vendas</h1>
+            </div>
+            <div class="bloco_botao_unico_menu_lateral">
+                <h1 class="botao_lateral" id="botao_funcionarios">Funcionários</h1>
+            </div>
+        </div>
+    </section>
+
+    <section class="sections_menu_lateral" id="section_frase_do_dia">
+        <p id="frase_do_dia">"Transforme sonhos em lares, desejos em realidade. Seja o elo entre esperança e lar. Cada venda é mais que uma transação, é a realização de um sonho. Você é o arquiteto de felicidades, o vendedor de sonhos."</p>
+    </section>
+    
+    <section class="sections_menu_lateral" id="section_cadastrar_imovel">
         <h1 class="titulo_sections">Cadastrar Imóvel</h1>
         <form id="form_cadastrar_imovel" action="/submit_imovel" method="post">
             <h1 class="subtitulos_cadastrar" id="subtitulo_informacoes_gerais_cadastrar">Informações do Imóvel:</h1>
@@ -144,6 +142,7 @@
             </div>
         </form>
     </section>
-        
+
+    <script src="Portal-Home/JS/controla_menu_lateral.js"></script>
 </body>
 </html>
