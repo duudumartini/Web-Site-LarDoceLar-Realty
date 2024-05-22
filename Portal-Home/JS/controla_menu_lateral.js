@@ -1,13 +1,20 @@
+const setaLateral = document.getElementById('seta_menu_lateral');
 const menu = document.getElementById('section_menu_lateral');
-        menu.addEventListener('click', () => {
-            if (menu.style.left === '0px' || menu.style.left === '') {
-                menu.style.left = '-180px';
-                menu.style.cursor ='pointer';
-            } else {
-                menu.style.left = '0px';
-                menu.style.cursor ='default';
-            }
-        });
+
+menu.addEventListener('click', () => {
+    if (menu.style.left === '0px' || menu.style.left === '') {
+        menu.style.left = '-180px';
+        menu.style.cursor = 'pointer';
+        setaLateral.style.transform = 'rotate(180deg)';
+        setaLateral.style.scale = '1';
+    } else {
+        menu.style.left = '0px';
+        menu.style.cursor = 'default';
+        setaLateral.style.transform = 'rotate(0deg)';
+        setaLateral.style.scale = '0.6';
+    }
+});
+
 
 function adicionarEventosBotoes() {
     // Seleciona todos os elementos com a classe 'botao_lateral'

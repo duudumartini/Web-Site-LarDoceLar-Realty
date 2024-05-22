@@ -42,6 +42,43 @@ body{
     background-color: #00111d;
 }
 
+
+label {
+    font-family: RedhatDisplayMediumItalic, sans-serif;
+    color:#E4E4E4;
+    margin-left: 10px;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input, textarea, select {
+    font-size: 16px;
+    padding: 10px;
+    border: 1px solid #4092CB;
+    background-color: #1C4867;
+    color:#DFE0E2;
+    border-radius: 10px;
+    width: 100%;
+    font-family: RedhatDisplayItalic, sans-serif;
+    box-sizing: border-box;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    background-color: #4CAF50;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    width: 100%;
+}
+
+button:hover {
+    background-color: #ff0000;
+}
+
+
 /* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=. */
 /* -=-=-=-=-=-=-=-=-=-=-=-=-=- BLOCO HEADER -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=. */
 /* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=. */
@@ -106,6 +143,18 @@ header{
     top: 0px;
     left: 0px;
     transition: left 0.5s ease-in-out;
+    background: linear-gradient(to bottom, #00111d, #00111d, #4092CB);
+}
+
+#seta_menu_lateral{
+    width: 40px;
+    filter: drop-shadow(0px 0px 10px black);
+    z-index: 2;
+    position: absolute;
+    right: -25px;
+    top:50vh;
+    scale: 0.6;
+    transition: transform 0.5s ease, scale 0.5s ease;
 }
 
 #meu_perfil_menu_lateral{
@@ -135,10 +184,9 @@ header{
 }
 
 .bloco_botao_unico_menu_lateral{
-    height: 30px;
+    height: 50px;
     display: flex;
     align-items: center;
-    border-bottom: 2px solid #00111D;
 }
 
 .botao_lateral{
@@ -147,6 +195,10 @@ header{
     color: #DFE0E2;
     cursor: pointer;
     transition: all 0.3s ease;
+}
+
+.botao_lateral:hover{
+    color:#6fa2c7;
 }
 
 .botao_lateral a {
@@ -174,7 +226,7 @@ header{
     color: #DFE0E2;
 }
 
-#botao_buscar_imovel::before {
+#botao_pesquisar_imovel::before {
     content: "\1F50E"; /* Código Unicode para o ícone de usuário em Font Awesome */
     font-family: "Font Awesome 5 Free";
     font-weight: 900; /* Necessário para alguns ícones */
@@ -273,41 +325,6 @@ header{
     grid-column: span 3;
 }
 
-label {
-    font-family: RedhatDisplayMediumItalic, sans-serif;
-    color:#E4E4E4;
-    margin-left: 10px;
-    margin-bottom: 5px;
-    font-weight: bold;
-}
-
-input, textarea, select {
-    font-size: 16px;
-    padding: 10px;
-    border: 1px solid #4092CB;
-    background-color: #1C4867;
-    color:#DFE0E2;
-    border-radius: 10px;
-    width: 100%;
-    font-family: RedhatDisplayItalic, sans-serif;
-    box-sizing: border-box;
-}
-
-button {
-    padding: 10px 20px;
-    border: none;
-    border-radius: 10px;
-    background-color: #4CAF50;
-    color: white;
-    font-size: 16px;
-    cursor: pointer;
-    width: 100%;
-}
-
-button:hover {
-    background-color: #ff0000;
-}
-
 #subtitulo_informacoes_gerais_cadastrar{ grid-column: 1/ 1; grid-row: 1/1; grid-column: span 3;}
 #titulo_cadastrar { grid-column: 1 / 2; grid-row: 2/2; grid-column: span 2;}
 #tipo_cadastrar { grid-column: 3 / 3; grid-row: 2/2;}
@@ -339,3 +356,72 @@ button:hover {
 #foto3_cadastrar{ grid-column: 3 / 4; grid-row: 13/13;}
 
 #full-width { grid-column: 1 / 1; grid-row: 14/14;}
+
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=. */
+/* -=-=-=-=-=-=-=-=-=--=-=-=- BUSCAR IMOVEL =-=-=-=-=-=-=-=-=-=-=-=-=-=-=. */
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=. */
+
+#section_pesquisar_imovel{
+    margin: 50px;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#bloco_pesquisar_buscar_imovel{
+    margin:50px;
+}
+
+#campo_pesquisar_imovel{
+    width: 50vw;
+}
+
+#bloco_area_resultado_pesquisar_movel{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    width: 90vw;
+}
+
+.bloco_unico_resultado_pesquisar_imovel{
+    padding: 10px;
+    border-radius: 20px;
+    margin: 40px;
+    background-color: #4092CB;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: scale 0.3s ease-in-out;
+    box-shadow: 0px 0px 10px #4092CB;
+    cursor: pointer;
+}
+
+.bloco_unico_resultado_pesquisar_imovel:hover{
+    scale: 1.05;
+}
+
+.foto_bloco_resultado_pesquisar{
+    width: 240px;
+    border: 2px solid #1C4867;
+    border-radius: 20px;
+}
+
+.codigo_bloco_resultado_pesquisar{
+    font-family: RedhatDisplayItalic, sans-serif;
+    margin-bottom: 10px;
+}
+
+.bloco_info_resultado_pesquisar{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.info_resultado_pesquisar{
+    font-family: RedhatDisplayLightItalic, sans-serif;
+    margin-top: 4px;
+    margin-bottom: 4px;
+}
