@@ -260,45 +260,53 @@
         <form id="form_cadastrar_funcionario" action="/submit_imovel" method="post">
             <img id="adicionar_foto_funcionario" src="Portal-Home/Imagens/ic_adicionar_foto.png" alt="Adicionar foto">
             <div class="form-group" id="nome_cadastrar_funcionario">
-                <label for="nome_funcionario">Nome Funcionário:</label>
-                <input type="text" id="nome_funcionario" name="nome_funcionario" placeholder="Ex: Marcos" required>
+                <label for="input_nome_cadastrar_funcionario">Nome Funcionário:</label>
+                <input type="text" id="input_nome_cadastrar_funcionario" name="input_nome_cadastrar_funcionario" placeholder="Ex: Marcos" required>
             </div>
             <div class="form-group" id="sobrenome_cadastrar_funcionario">
-                <label for="sobrenome_funcionario">Sobrenome Funcionário:</label>
-                <input type="text" id="sobrenome_funcionario" name="sobrenome_funcionario" placeholder="Ex: Da Silva" required>
+                <label for="input_sobrenome_cadastrar_funcionario">Sobrenome Funcionário:</label>
+                <input type="text" id="input_sobrenome_cadastrar_funcionario" name="input_sobrenome_cadastrar_funcionario" placeholder="Ex: Da Silva" required>
             </div>
             <div class="form-group" id="CPF_cadastrar_funcionarios">
-                <label for="CPF">CPF:</label>
-                <input type="number" id="CPF" name="CPF" placeholder="Ex: 09761233871" required>
+                <label for="input_cpf_cadastro_funcionario">CPF:</label>
+                <input type="number" id="input_cpf_cadastro_funcionario" name="input_cpf_cadastro_funcionario" placeholder="Ex: 09761233871" required>
             </div>
             <div class="form-group" id="nascimento_cadastrar_funcionarios">
-                <label for="nascimento">Data de nascimento:</label>
-                <input type="date" id="nascimento" name="nascimento" required>
+                <label for="input_nascimento_cadastrar_funcionario">Data de nascimento:</label>
+                <input type="date" id="input_nascimento_cadastrar_funcionario" name="input_nascimento_cadastrar_funcionario" required>
             </div>
             <div class="form-group" id="genero_cadastrar_funcionario">
-                <label for="Genero">Genêro:</label>
-                <select id="Genero" name="Genero" required>
+                <label for="select_genero">Genêro:</label>
+                <select id="select_genero" name="select_genero" required>
                     <option value=""></option>
-                    <option value="apartamento">Masculino</option>
-                    <option value="terreno">Feminino</option>
-                    <option value="comercial">Não Informado</option>
+                    <option value="masculino">Masculino</option>
+                    <option value="feminino">Feminino</option>
+                    <option value="não_informado">Não Informado</option>
                 </select>
             </div>
             <div class="form-group" id="outro_genero_cadastrar_funcionario">
                 <label for="outro_genero">Informar Gênero:</label>
                 <input type="text" id="outro_genero" name="outro_genero" placeholder="Ex: Transexual" required>
             </div>
-            <div class="form-group" id="celular_cadastrar_funcionario">
-                <label for="celular">Celular:</label>
-                <input type="tel" id="celular" name="celular" placeholder="Ex: 47999472753" required>
+            <div class="form-group" id="cep_cadastrar_funcionario">
+                <label for="input_cep_cadastrar_funcionario">CEP:</label>
+                <input type="number" id="input_cep_cadastrar_funcionario" name="cep" placeholder="Ex: 88317400" required>
             </div>
             <div class="form-group" id="endereco_cadastrar_funcionario">
-                <label for="endereco">Endereço:</label>
-                <input type="text" id="endereco" name="endereco" placeholder="Ex: R. José Marques, 301 - Centro" required>
+                <label for="input_endereco_cadastrar_funcionario">Endereço:</label>
+                <input type="text" id="input_endereco_cadastrar_funcionario" name="input_endereco_cadastrar_funcionario" placeholder="Ex: R. José Marques, 301 - Centro" required>
             </div>
             <div class="form-group" id="cidade_cadastrar_funcionario">
-                <label for="cidade">Cidade:</label>
-                <input type="text" id="cidade" name="cidade" placeholder="Ex: Itapema" required>
+                <label for="input_cidade_cadastrar_funcionario">Cidade:</label>
+                <input type="text" id="input_cidade_cadastrar_funcionario" name="input_cidade_cadastrar_funcionario" placeholder="Ex: Itapema" required>
+            </div>
+            <div class="form-group" id="email_cadastrar_funcionario">
+                <label for="input_email_cadastrar_funcionario">Email:</label>
+                <input type="tel" id="input_email_cadastrar_funcionario" name="input_email_cadastrar_funcionario" placeholder="Ex: marcos_dasilva@email.com" required>
+            </div>
+            <div class="form-group" id="celular_cadastrar_funcionario">
+                <label for="input_celular_cadastrar_funcionario">Celular:</label>
+                <input type="tel" id="input_celular_cadastrar_funcionario" name="input_celular_cadastrar_funcionario" placeholder="Ex: 47999472753" required>
             </div>
             <h1 class="subtitulos_cadastrar" id="subtitulo_login_cadastrar_funcionario">Informações de Login:</h1>
             <div class="form-group" id="usuario_cadastrar_funcionario">
@@ -306,20 +314,20 @@
                 <input type="text" id="usuario" name="usuario" placeholder="Ex: Marcos123$" required>
             </div>
             <div class="form-group" id="senha_cadastrar_funcionario">
-                <label for="usuario">Senha:</label>
-                <input type="password" id="usuario" name="usuario" placeholder="Ex: Marcos123$" required>
+                <label for="senha">Senha:</label>
+                <input type="password" id="senha" name="senha" required>
             </div>
-            <div class="form-group" id="usuario_cadastrar_funcionario">
-                <label for="usuario">Confirmar Senha:</label>
-                <input type="password" id="usuario" name="usuario" placeholder="Ex: Marcos123$" required>
+            <div class="form-group" id="confirmar_senha_cadastrar_funcionario">
+                <label for="confirmar_senha">Confirmar Senha:</label>
+                <input type="password" id="confirmar_senha" name="confirmar_senha" required>
             </div>
             <div class="form-group full-width">
-                <button type="submit">Cadastrar Imóvel</button>
+                <button type="submit">Cadastrar Funcionário</button>
             </div>
         </form>
     </section>
     <script src="Portal-Home/JS/controla_menu_lateral.js"></script>
     <script src="Portal-Home/JS/controla_dashboard.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    ,<script src="Portal-Home/JS/controla_cadastro_funcionario.js"></script>
 </body>
 </html>

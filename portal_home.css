@@ -447,16 +447,21 @@ header{
 }
 
 #form_cadastrar_funcionario {
+    margin-top: 30px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
     max-width: 1200px;
-    margin: auto;
 }
 
 #adicionar_foto_funcionario{
     width: 250px;
     margin: 10px;
+    cursor:pointer
+}
+
+#outro_genero_cadastrar_funcionario{
+    display: none;
 }
 
 
@@ -470,8 +475,15 @@ header{
 #genero_cadastrar_funcionario { grid-column: 2 / 2; grid-row: 3/3;}
 #outro_genero_cadastrar_funcionario { grid-column: 3 / 3; grid-row: 3/3;}
 
-#celular_cadastrar_funcionario { grid-column: 1 / 1; grid-row: 4/4;}
+#cep_cadastrar_funcionario { grid-column: 1 / 1; grid-row: 4/4;}
 #endereco_cadastrar_funcionario { grid-column: 2 / 2; grid-row: 4/4;}
 #cidade_cadastrar_funcionario { grid-column: 3 / 3; grid-row: 4/4;}
 
-#subtitulo_login_cadastrar_funcionario { grid-column: 1 / 3; grid-row: 5/5;}
+#email_cadastrar_funcionario { grid-column: 1 / 3; grid-row: 5/5;}
+#celular_cadastrar_funcionario { grid-column: 3 / 3; grid-row: 5/5;}
+
+#subtitulo_login_cadastrar_funcionario { grid-column: 1 / 3; grid-row: 6/6;}
+
+#usuario_cadastrar_funcionario { grid-column: 1 / 1; grid-row: 7/7;}
+#senha_cadastrar_funcionario { grid-column: 2 / 2; grid-row: 7/7;}
+#confirmar_senha_cadastrar_funcionario { grid-column: 3 / 3; grid-row: 7/7;}
