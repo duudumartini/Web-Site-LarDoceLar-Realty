@@ -55,8 +55,8 @@ input, textarea, select {
     font-size: 16px;
     padding: 10px;
     border: 1px solid #4092CB;
-    background-color: #1C4867;
-    color:#DFE0E2;
+    background-color: #E4E4E4;
+    color:#1C4867;
     border-radius: 10px;
     width: 100%;
     font-family: RedhatDisplayItalic, sans-serif;
@@ -429,4 +429,23 @@ header{
     margin-top: 4px;
     color: #000000;
     margin-bottom: 4px;
+}
+
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=. */
+/* -=-=-=-=-=-=-=-=-=--=-=-=-=-= VENDAS =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=. */
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=. */
+
+.dashboard {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.dashboard-item {
+    flex: 1;
+    min-width: 300px;
+    max-width: 600px;
+}
+.dashboard-item canvas {
+    width: 100%;
+    height: 400px;
 }

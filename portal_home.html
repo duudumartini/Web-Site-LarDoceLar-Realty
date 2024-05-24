@@ -18,7 +18,7 @@
     <section id="section_menu_lateral">
         <img id="seta_menu_lateral" src="Portal-Home/Imagens/ic_seta.png" alt="Seta Menu Lateral">
         <div id="meu_perfil_menu_lateral">
-            <img id="minha_foto_menu_lateral" src="Portal-Home/Imagens/ft_noimage.jpg" alt="Foto Perfil">
+            <img id="minha_foto_menu_lateral" src="Portal-Home/Imagens/ft_perfil_menu.jpg" alt="Foto Perfil">
             <h1 id="nome_usuario_menu_lateral">Eduardo Deon Martini</h1>
         </div>
         <div id="bloco_botoes_menu_lateral">
@@ -251,6 +251,28 @@
             
         </div>
     </section>
+
+    <section class="sections_menu_lateral" id="section_vendas">
+        <div class="dashboard">
+            <div class="dashboard-item">
+                <h3>Vendas Totais</h3>
+                <canvas id="totalSalesChart"></canvas>
+            </div>
+            <div class="dashboard-item">
+                <h3>Vendas por Funcionário</h3>
+                <canvas id="salesByEmployeeChart"></canvas>
+            </div>
+            <div class="dashboard-item">
+                <h3>Total em R$ por Vendas</h3>
+                <canvas id="revenueChart"></canvas>
+            </div>
+            <div class="dashboard-item">
+                <h3>Total de R$ das Vendas</h3>
+                <canvas id="totalRevenueChart"></canvas>
+            </div>
+        </div>
+    </section>
     <script src="Portal-Home/JS/controla_menu_lateral.js"></script>
+    <script src="Portal-Home/JS/controla_dashboard.js"></script>
 </body>
 </html>
