@@ -32,10 +32,13 @@
                 <h1 class="botao_lateral" id="botao_pesquisar_imovel">Pesquisar Imóvel</h1>
             </div>
             <div class="bloco_botao_unico_menu_lateral">
-                <h1 class="botao_lateral" id="botao_vendas">Vendas</h1>
+                <h1 class="botao_lateral" id="botao_meus_dados">Meus dados</h1>
             </div>
             <div class="bloco_botao_unico_menu_lateral">
                 <h1 class="botao_lateral" id="botao_funcionarios">Funcionários</h1>
+            </div>
+            <div class="bloco_botao_unico_menu_lateral">
+                <h1 class="botao_lateral" id="botao_cadastrar_funcionario">Cadastrar Funcionários</h1>
             </div>
         </div>
     </section>
@@ -252,27 +255,71 @@
         </div>
     </section>
 
-    <section class="sections_menu_lateral" id="section_vendas">
-        <div class="dashboard">
-            <div class="dashboard-item">
-                <h3>Vendas Totais</h3>
-                <canvas id="totalSalesChart"></canvas>
+    <section class="sections_menu_lateral" id="section_cadastrar_funcionario">
+        <h1 class="titulo_sections">Cadastrar Funcionário</h1>
+        <form id="form_cadastrar_funcionario" action="/submit_imovel" method="post">
+            <img id="adicionar_foto_funcionario" src="Portal-Home/Imagens/ic_adicionar_foto.png" alt="Adicionar foto">
+            <div class="form-group" id="nome_cadastrar_funcionario">
+                <label for="nome_funcionario">Nome Funcionário:</label>
+                <input type="text" id="nome_funcionario" name="nome_funcionario" placeholder="Ex: Marcos" required>
             </div>
-            <div class="dashboard-item">
-                <h3>Vendas por Funcionário</h3>
-                <canvas id="salesByEmployeeChart"></canvas>
+            <div class="form-group" id="sobrenome_cadastrar_funcionario">
+                <label for="sobrenome_funcionario">Sobrenome Funcionário:</label>
+                <input type="text" id="sobrenome_funcionario" name="sobrenome_funcionario" placeholder="Ex: Da Silva" required>
             </div>
-            <div class="dashboard-item">
-                <h3>Total em R$ por Vendas</h3>
-                <canvas id="revenueChart"></canvas>
+            <div class="form-group" id="CPF_cadastrar_funcionarios">
+                <label for="CPF">CPF:</label>
+                <input type="number" id="CPF" name="CPF" placeholder="Ex: 09761233871" required>
             </div>
-            <div class="dashboard-item">
-                <h3>Total de R$ das Vendas</h3>
-                <canvas id="totalRevenueChart"></canvas>
+            <div class="form-group" id="nascimento_cadastrar_funcionarios">
+                <label for="nascimento">Data de nascimento:</label>
+                <input type="date" id="nascimento" name="nascimento" required>
             </div>
-        </div>
+            <div class="form-group" id="genero_cadastrar_funcionario">
+                <label for="Genero">Genêro:</label>
+                <select id="Genero" name="Genero" required>
+                    <option value=""></option>
+                    <option value="apartamento">Masculino</option>
+                    <option value="terreno">Feminino</option>
+                    <option value="comercial">Não Informado</option>
+                </select>
+            </div>
+            <div class="form-group" id="outro_genero_cadastrar_funcionario">
+                <label for="outro_genero">Informar Gênero:</label>
+                <input type="text" id="outro_genero" name="outro_genero" placeholder="Ex: Transexual" required>
+            </div>
+            <div class="form-group" id="celular_cadastrar_funcionario">
+                <label for="celular">Celular:</label>
+                <input type="tel" id="celular" name="celular" placeholder="Ex: 47999472753" required>
+            </div>
+            <div class="form-group" id="endereco_cadastrar_funcionario">
+                <label for="endereco">Endereço:</label>
+                <input type="text" id="endereco" name="endereco" placeholder="Ex: R. José Marques, 301 - Centro" required>
+            </div>
+            <div class="form-group" id="cidade_cadastrar_funcionario">
+                <label for="cidade">Cidade:</label>
+                <input type="text" id="cidade" name="cidade" placeholder="Ex: Itapema" required>
+            </div>
+            <h1 class="subtitulos_cadastrar" id="subtitulo_login_cadastrar_funcionario">Informações de Login:</h1>
+            <div class="form-group" id="usuario_cadastrar_funcionario">
+                <label for="usuario">Usuário:</label>
+                <input type="text" id="usuario" name="usuario" placeholder="Ex: Marcos123$" required>
+            </div>
+            <div class="form-group" id="senha_cadastrar_funcionario">
+                <label for="usuario">Senha:</label>
+                <input type="password" id="usuario" name="usuario" placeholder="Ex: Marcos123$" required>
+            </div>
+            <div class="form-group" id="usuario_cadastrar_funcionario">
+                <label for="usuario">Confirmar Senha:</label>
+                <input type="password" id="usuario" name="usuario" placeholder="Ex: Marcos123$" required>
+            </div>
+            <div class="form-group full-width">
+                <button type="submit">Cadastrar Imóvel</button>
+            </div>
+        </form>
     </section>
     <script src="Portal-Home/JS/controla_menu_lateral.js"></script>
     <script src="Portal-Home/JS/controla_dashboard.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </body>
 </html>

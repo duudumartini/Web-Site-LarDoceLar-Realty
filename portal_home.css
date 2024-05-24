@@ -28,14 +28,6 @@
     src: url('Fontes/red-hat-display-2/DancingScript-VariableFont_wght.ttf') format('truetype');
 }
 
-/*
---rich-black: #00111Dff;
---battleship-gray: #898684ff;
---platinum: #E4E4E4ff;
---celestial-blue: #4092CBff;
---indigo-dye: #1C4867ff;
-https://coolors.co/00111d-898684-e4e4e4-4092cb-1c4867*/
-
 body{
     width: 100vw;
     overflow-x: hidden;
@@ -236,8 +228,8 @@ header{
     color: #DFE0E2;
 }
 
-#botao_vendas::before {
-    content: "\1F4C8"; /* Código Unicode para o ícone de usuário em Font Awesome */
+#botao_meus_dados::before {
+    content: "\26ED"; /* Código Unicode para o ícone de usuário em Font Awesome */
     font-family: "Font Awesome 5 Free";
     font-weight: 900; /* Necessário para alguns ícones */
     margin-right: 8px;
@@ -247,7 +239,17 @@ header{
 }
 
 #botao_funcionarios::before {
-    content: "\1F477"; /* Código Unicode para o ícone de usuário em Font Awesome */
+    content: "\1F465"; /* Código Unicode para o ícone de usuário em Font Awesome */
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900; /* Necessário para alguns ícones */
+    margin-right: 8px;
+    font-size: 15px;
+    display: inline-block;
+    color: #DFE0E2;
+}
+
+#botao_cadastrar_funcionario::before {
+    content: "\1F472"; /* Código Unicode para o ícone de usuário em Font Awesome */
     font-family: "Font Awesome 5 Free";
     font-weight: 900; /* Necessário para alguns ícones */
     margin-right: 8px;
@@ -317,6 +319,7 @@ header{
 
 .form-group {
     display: flex;
+    justify-content: center;
     flex-direction: column;
     position:relative;
 }
@@ -432,20 +435,43 @@ header{
 }
 
 /* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=. */
-/* -=-=-=-=-=-=-=-=-=--=-=-=-=-= VENDAS =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=. */
+/* -=-=-=-=-=-=-=-=-=-=-= CADASTRAR FUNCIONARIO =-=-=-=-=-=-=-=-=-=-=-=-=. */
 /* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=. */
 
-.dashboard {
-    display: flex;
-    flex-wrap: wrap;
+#section_cadastrar_funcionario{
+    margin: 50px;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#form_cadastrar_funcionario {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     gap: 20px;
+    max-width: 1200px;
+    margin: auto;
 }
-.dashboard-item {
-    flex: 1;
-    min-width: 300px;
-    max-width: 600px;
+
+#adicionar_foto_funcionario{
+    width: 250px;
+    margin: 10px;
 }
-.dashboard-item canvas {
-    width: 100%;
-    height: 400px;
-}
+
+
+#adicionar_foto_funcionario{ grid-column: 1/ 1; grid-row: 1/2; grid-row: span 3;}
+#nome_cadastrar_funcionario { grid-column: 2 / 2; grid-row: 1/1;}
+#sobrenome_cadastrar_funcionario { grid-column: 3 / 3; grid-row: 1/1;}
+
+#CPF_cadastrar_funcionario { grid-column: 2 / 2; grid-row: 2/2;}
+#nascimento_cadastrar_funcionario { grid-column: 3 / 3; grid-row: 2/2;}
+
+#genero_cadastrar_funcionario { grid-column: 2 / 2; grid-row: 3/3;}
+#outro_genero_cadastrar_funcionario { grid-column: 3 / 3; grid-row: 3/3;}
+
+#celular_cadastrar_funcionario { grid-column: 1 / 1; grid-row: 4/4;}
+#endereco_cadastrar_funcionario { grid-column: 2 / 2; grid-row: 4/4;}
+#cidade_cadastrar_funcionario { grid-column: 3 / 3; grid-row: 4/4;}
+
+#subtitulo_login_cadastrar_funcionario { grid-column: 1 / 3; grid-row: 5/5;}
