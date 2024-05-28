@@ -149,8 +149,146 @@ function alteraBackground() {
     addBlurEventListener("select_genero");
     addBlurEventListener("outro_genero");
     addBlurEventListener("input_num_endereco_cadastro_funcionario");
+    addBlurEventListener("input_endereco_cadastro_funcionario");
+    addBlurEventListener("input_cidade_cadastrar_funcionario");
 }
 
+function validarEmail(){
+    let emailInput = document.getElementById('input_email_cadastrar_funcionario');
+    let email = emailInput.value;
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const valido = emailPattern.test(email);
+
+    if(valido){
+        emailInput.style.backgroundColor = '#0cffae';
+    }
+    else{
+        emailInput.style.backgroundColor = '#ff9c9c';
+    }
+}
+
+function validarCelular() {
+    let celularInput = document.getElementById('input_celular_cadastrar_funcionario');
+    let celular = celularInput.value;
+    // Padrão para validar o número de celular
+    const valido = celular.length >= 11
+
+    if (valido) {
+        celularInput.style.backgroundColor = '#0cffae'; // Verde para válido
+    } else {
+        celularInput.style.backgroundColor = '#ff9c9c'; // Vermelho para inválido
+    }
+}
+
+function validarUsuario() {
+    let usuarioInput = document.getElementById('input_usuario_cadastrar_funcionario');
+    let usuario = usuarioInput.value;
+    // Verifica se o comprimento do ID do usuário é pelo menos 5 caracteres
+    const valido = usuario.length >= 5;
+
+    if (valido) {
+        usuarioInput.style.backgroundColor = '#0cffae'; // Verde para válido
+    } else {
+        usuarioInput.style.backgroundColor = '#ff9c9c'; // Vermelho para inválido
+    }
+}
+
+function validarSenha() {
+    let senhaInput = document.getElementById('input_senha_cadastrar_funcionario');
+    let confirmarSenhaInput = document.getElementById('input_confirmar_senha_cadastrar_usuario');
+    let senha = senhaInput.value;
+    let confirmarSenha = confirmarSenhaInput.value;
+    // Verifica se a senha tem pelo menos 5 caracteres
+    const senhaValida = senha.length >= 5;
+    const confirmarSenhaValida = confirmarSenha.length >= 5;
+
+    if (senhaValida && senha !== '') {
+        senhaInput.style.backgroundColor = '#0cffae'; // Verde para válida
+    } else {
+        senhaInput.style.backgroundColor = '#ff9c9c'; // Vermelho para inválida
+    }
+
+    if (confirmarSenhaValida && confirmarSenha !== '') {
+        confirmarSenhaInput.style.backgroundColor = '#0cffae'; // Verde para válida
+    } else {
+        confirmarSenhaInput.style.backgroundColor = '#ff9c9c'; // Vermelho para inválida
+    }
+
+    if (senha !== '' && confirmarSenha !== '' && confirmarSenha !== senha) {
+        confirmarSenhaInput.style.backgroundColor = '#ff9c9c';
+        senhaInput.style.backgroundColor = '#ff9c9c';
+        alert("As senhas não conferem!");
+    }
+}
+
+function trocaFoto() {
+    let imagemFuncionario = document.getElementById('adicionar_foto_funcionario');
+    let inputArquivo = document.createElement('input');
+    inputArquivo.type = 'file';
+
+    inputArquivo.addEventListener('change', function() {
+        // Verifica se um arquivo foi selecionado
+        if (inputArquivo.files && inputArquivo.files[0]) {
+            let reader = new FileReader();
+            
+            reader.onload = function(e) {
+                let img = new Image();
+                img.onload = function() {
+                    let canvas = document.createElement('canvas');
+                    let ctx = canvas.getContext('2d');
+                    let largura = 200; // Tamanho desejado da imagem
+                    let altura = 200; // Tamanho desejado da imagem
+
+                    // Verifica qual é o menor tamanho (largura ou altura)
+                    let minSize = Math.min(img.width, img.height);
+                    
+                    // Calcula o tamanho e o ponto de partida para o corte
+                    let startX = (img.width - minSize) / 2;
+                    let startY = (img.height - minSize) / 2;
+                    canvas.width = largura;
+                    canvas.height = altura;
+                    
+                    // Desenha a imagem cortada e redimensionada no canvas
+                    ctx.drawImage(img, startX, startY, minSize, minSize, 0, 0, largura, altura);
+                    
+                    // Define a imagem da foto do funcionário como a imagem do canvas (cortada e redimensionada)
+                    imagemFuncionario.src = canvas.toDataURL('image/jpeg');
+                };
+                img.src = e.target.result;
+            };
+            
+            reader.readAsDataURL(inputArquivo.files[0]);
+        }
+    });
+    
+    // Simula um clique no input de arquivo
+    inputArquivo.click();
+}
+
+document.getElementById("adicionar_foto_funcionario").addEventListener("click", function() {
+    trocaFoto();
+});
+
+
+document.getElementById("input_senha_cadastrar_funcionario").addEventListener("blur", function() {
+    validarSenha();
+});
+
+document.getElementById("input_confirmar_senha_cadastrar_usuario").addEventListener("blur", function() {
+    validarSenha();
+});
+
+document.getElementById("input_usuario_cadastrar_funcionario").addEventListener("blur", function() {
+    validarUsuario();
+});
+
+document.getElementById("input_email_cadastrar_funcionario").addEventListener("blur", function() {
+    validarEmail();
+});
+
+document.getElementById("input_celular_cadastrar_funcionario").addEventListener("blur", function() {
+    validarCelular();
+});
 
 document.getElementById("input_nascimento_cadastrar_funcionario").addEventListener("blur", function() {
     validarDataNascimento();

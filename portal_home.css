@@ -457,6 +457,7 @@ header{
 #adicionar_foto_funcionario{
     width: 250px;
     margin: 10px;
+    border-radius: 20px;
     cursor:pointer
 }
 
