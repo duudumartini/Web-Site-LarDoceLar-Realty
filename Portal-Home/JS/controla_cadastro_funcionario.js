@@ -40,6 +40,7 @@ function validarDataNascimento() {
 }
 
 function validarCEP(cep){
+    let input_cep = document.getElementById("input_cep_cadastrar_funcionario")
     let input_endereco = document.getElementById("input_endereco_cadastrar_funcionario");
     let input_cidade = document.getElementById("input_cidade_cadastrar_funcionario");
     let url = `https://viacep.com.br/ws/${cep}/json/`;
@@ -61,13 +62,19 @@ function validarCEP(cep){
         let cidade = `${data.localidade} / ${data.uf}`;
         input_endereco.value = endereco;
         input_cidade.value = cidade;
+        input_cep.style.backgroundColor = '#0cffae';        
     })
     .catch(error => {
         // Captura e trata erros de requisição
         alert("CEP não localizado!");
         input_endereco.value = '';
         input_cidade.value = '';
+        inputCep.style.backgroundColor = '#ff9c9c'
     });
+}
+
+function alteraBackground(){
+
 }
 
 // Função para chamar a validação ao perder o foco do campo de data de nascimento
