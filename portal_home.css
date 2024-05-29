@@ -342,8 +342,9 @@ header{
 #subtitulo_endereco_cadastrar{ grid-column: 1/ 1; grid-row: 6/6; grid-column: span 3}
 #cep_cadastrar { grid-column: 1 / 1; grid-row: 7/7;}
 #endereco_cadastrar { grid-column: 1 / 1; grid-row: 8/8;}
-#cidade_cadastrar { grid-column: 2 / 2; grid-row: 8/8;}
-#estado_cadastrar { grid-column: 3 / 3; grid-row: 8/8;}
+#numero_cadastrar { grid-column: 2 / 2; grid-row: 8/8;}
+#cidade_cadastrar { grid-column: 3 / 3; grid-row: 8/8;}
+
 
 #titulo_dados_proprietario_cadastrar{ grid-column: 1 / 1; grid-row: 9/9; grid-column: span 3}
 #proprietario_nome_cadastrar{ grid-column: 1 / 1; grid-row: 10/10;}
