@@ -152,7 +152,7 @@
         </form>
     </section>
     <section class="sections_menu_lateral" id="section_pesquisar_imovel">
-        <h1 class="titulo_sections">Pesquisar Imóvel</h1>
+        <h1 class="titulo_sections" id="titulo_pesquisar_imovel">Pesquisar Imóvel</h1>
         <div id="bloco_pesquisar_buscar_imovel">
             <input type="search" id="campo_pesquisar_imovel" placeholder="Pesquisar imóvel...">
         </div>
@@ -187,43 +187,43 @@
             
         </div>
         <div id="bloco_editar_imovel">
-            <h1 class="titulo_sections">Cadastrar Imóvel</h1>
-        <form id="form_cadastrar_imovel" action="/submit_imovel" method="post">
+            <h1 class="titulo_sections">Editar Informações do Imóvel</h1>
+            <form id="form_editar_imovel" action="/submit_imovel" method="post">
             <h1 class="subtitulos_cadastrar" id="subtitulo_informacoes_gerais_cadastrar">Informações do Imóvel:</h1>
             <div class="form-group" id="titulo_cadastrar">
-                <label for="input_titulo_imovel_cadastrar_imovel">Título do Imóvel:</label>
-                <input type="text" id="input_titulo_imovel_cadastrar_imovel" name="input_titulo_imovel_cadastrar_imovel" placeholder="Ex: Casa com Vista para o Mar" required autocomplete="off">
+                <label for="input_titulo_imovel_editar_imovel">Título do Imóvel:</label>
+                <input type="text" id="input_titulo_imovel_editar_imovel" name="input_titulo_imovel_editar_imovel" placeholder="Ex: Casa com Vista para o Mar" required autocomplete="off">
             </div>
             <div class="form-group" id="preco_cadastar">
-                <label for="input_preco_cadastrar_imovel">Preço:</label>
+                <label for="input_preco_editar_imovel">Preço:</label>
                 <div class="input-group">
-                    <input type="number" id="input_preco_cadastrar_imovel" name="input_preco_cadastrar_imovel" placeholder="Ex: 500000" required autocomplete="off">
+                    <input type="number" id="input_preco_editar_imovel" name="input_preco_editar_imovel" placeholder="Ex: 500000" required autocomplete="off">
                 </div>
             </div>
             <div class="form-group" id="descricao_cadastrar">
-                <label for="input_descricao_cadastrar_imovel">Descrição do imóvel:</label>
-                <textarea id="input_descricao_cadastrar_imovel" name="input_descricao_cadastrar_imovel" rows="4" placeholder="Descreva o imóvel..." required autocomplete="off"></textarea>
+                <label for="input_descricao_editar_imovel">Descrição do imóvel:</label>
+                <textarea id="input_descricao_editar_imovel" name="input_descricao_editar_imovel" rows="4" placeholder="Descreva o imóvel..." required autocomplete="off"></textarea>
             </div>
             <h1 class="subtitulos_cadastrar" id="subtitulo_endereco_cadastrar">Endereço:</h1>
             <div class="form-group" id="cep_cadastrar">
-                <label for="input_cep_cadastrar_imovel">CEP:</label>
-                <input type="text" id="input_cep_cadastrar_imovel" name="input_cep_cadastrar_imovel" placeholder="Ex: 12345-678" required autocomplete="off">
+                <label for="input_cep_editar_imovel">CEP:</label>
+                <input type="text" id="input_cep_editar_imovel" name="input_cep_editar_imovel" placeholder="Ex: 12345-678" required autocomplete="off">
             </div>
             <div class="form-group" id="endereco_cadastrar">
-                <label for="input_endereco_cadastrar_imovel">Endereço:</label>
-                <input type="text" id="input_endereco_cadastrar_imovel" name="input_endereco_cadastrar_imovel" placeholder="Ex: Rua das Flores, 123" required autocomplete="off">
+                <label for="input_endereco_editar_imovel">Endereço:</label>
+                <input type="text" id="input_endereco_editar_imovel" name="input_endereco_editar_imovel" placeholder="Ex: Rua das Flores, 123" required autocomplete="off">
             </div>
             <div class="form-group" id="cidade_cadastrar">
-                <label for="input_cidade_cadastrar_imovel">Cidade:</label>
-                <input type="text" id="input_cidade_cadastrar_imovel" name="input_cidade_cadastrar_imovel" placeholder="Ex: Itapema / SC" required autocomplete="off">
+                <label for="input_cidade_editar_imovel">Cidade:</label>
+                <input type="text" id="input_cidade_editar_imovel" name="input_cidade_editar_imovel" placeholder="Ex: Itapema / SC" required autocomplete="off">
             </div>
             <div class="form-group" id="numero_cadastrar">
-                <label for="input_numero_cadastrar_imovel">Número:</label>
-                <input type="text" id="input_numero_cadastrar_imovel" name="input_numero_cadastrar_imovel" placeholder="Ex: 1048" required autocomplete="off">
+                <label for="input_numero_editar_imovel">Número:</label>
+                <input type="text" id="input_numero_editar_imovel" name="input_numero_editar_imovel" placeholder="Ex: 1048" required autocomplete="off">
             </div>
             <div class="form-group" id="tipo_cadastrar">
-                <label for="input_tipo_cadastrar_imovel">Tipo de Imóvel:</label>
-                <select id="input_tipo_cadastrar_imovel" name="input_tipo_cadastrar_imovel" required>
+                <label for="input_tipo_editar_imovel">Tipo de Imóvel:</label>
+                <select id="input_tipo_editar_imovel" name="input_tipo_editar_imovel" required>
                     <option value=""></option>
                     <option value="casa">Casa</option>
                     <option value="apartamento">Apartamento</option>
@@ -232,58 +232,58 @@
                 </select>
             </div>
             <div class="form-group" id="area_cadastrar">
-                <label for="input_area_cadastrar_imovel">Área (m²):</label>
-                <input type="number" id="input_area_cadastrar_imovel" name="input_area_cadastrar_imovel" placeholder="Ex: 120" required autocomplete="off">
+                <label for="input_area_editar_imovel">Área (m²):</label>
+                <input type="number" id="input_area_editar_imovel" name="input_area_editar_imovel" placeholder="Ex: 120" required autocomplete="off">
             </div>
             <div class="form-group" id="quartos_cadastrar">
-                <label for="input_quartos_cadastrar_imovel">Número de Quartos:</label>
-                <input type="number" id="input_quartos_cadastrar_imovel" name="input_quartos_cadastrar_imovel" placeholder="Ex: 3" required autocomplete="off">
+                <label for="input_quartos_editar_imovel">Número de Quartos:</label>
+                <input type="number" id="input_quartos_editar_imovel" name="input_quartos_editar_imovel" placeholder="Ex: 3" required autocomplete="off">
             </div>
             <div class="form-group" id="banheiros_cadastrar">
-                <label for="input_banheiros_cadastrar_imovel">Número de Banheiros:</label>
-                <input type="number" id="input_banheiros_cadastrar_imovel" name="input_banheiros_cadastrar_imovel" placeholder="Ex: 2" required autocomplete="off">
+                <label for="input_banheiros_editar_imovel">Número de Banheiros:</label>
+                <input type="number" id="input_banheiros_editar_imovel" name="input_banheiros_editar_imovel" placeholder="Ex: 2" required autocomplete="off">
             </div>
             <div class="form-group" id="vagas_cadastrar">
-                <label for="input_vagas_cadastrar_imovel">Número de Vagas de Garagem:</label>
-                <input type="number" id="input_vagas_cadastrar_imovel" name="input_vagas_cadastrar_imovel" placeholder="Ex: 1" required autocomplete="off">
+                <label for="input_vagas_editar_imovel">Número de Vagas de Garagem:</label>
+                <input type="number" id="input_vagas_editar_imovel" name="input_vagas_editar_imovel" placeholder="Ex: 1" required autocomplete="off">
             </div>
             <div class="form-group" id="destaque_cadastrar">
-                <label for="checkbox_destaque_cadastrar_imovel">É destaque?</label>
-                <input type="checkbox" id="checkbox_destaque_cadastrar_imovel" name="checkbox_destaque_cadastrar_imovel">
+                <label for="checkbox_destaque_editar_imovel">É destaque?</label>
+                <input type="checkbox" id="checkbox_destaque_editar_imovel" name="checkbox_destaque_editar_imovel">
             </div>
             <h1 class="subtitulos_cadastrar" id="titulo_dados_proprietario_cadastrar">Dados Proprietário:</h1>
             <div class="form-group" id="proprietario_nome_cadastrar">
-                <label for="input_nome_proprietario_cadastrar_imovel">Proprietário Nome:</label>
-                <input type="text" id="input_nome_proprietario_cadastrar_imovel" name="input_nome_proprietario_cadastrar_imovel" placeholder="Ex: Eduardo" required autocomplete="off">
+                <label for="input_nome_proprietario_editar_imovel">Proprietário Nome:</label>
+                <input type="text" id="input_nome_proprietario_editar_imovel" name="input_nome_proprietario_editar_imovel" placeholder="Ex: Eduardo" required autocomplete="off">
             </div>
             <div class="form-group" id="proprietario_sobrenome_cadastrar">
-                <label for="input_sobrenome_propritario_cadastrar_imovel">Proprietário Sobrenome:</label>
-                <input type="text" id="input_sobrenome_propritario_cadastrar_imovel" name="input_sobrenome_propritario_cadastrar_imovel" placeholder="Ex: Deon Martini" required autocomplete="off">
+                <label for="input_sobrenome_propritario_editar_imovel">Proprietário Sobrenome:</label>
+                <input type="text" id="input_sobrenome_propritario_editar_imovel" name="input_sobrenome_propritario_editar_imovel" placeholder="Ex: Deon Martini" required autocomplete="off">
             </div>
             <div class="form-group" id="proprietario_CPF_cadastrar">
-                <label for="input_cpf_cadastrar_imovel">Proprietário CPF:</label>
-                <input type="number" id="input_cpf_cadastrar_imovel" name="input_cpf_cadastrar_imovel" placeholder="Ex: 07670171920" required autocomplete="off">
+                <label for="input_cpf_editar_imovel">Proprietário CPF:</label>
+                <input type="number" id="input_cpf_editar_imovel" name="input_cpf_editar_imovel" placeholder="Ex: 07670171920" required autocomplete="off">
             </div>
             <div class="form-group" id="proprietario_telefone_cadastrar">
-                <label for="input_telefone_cadastrar_imovel">Proprietário Telefone:</label>
-                <input type="number" id="input_telefone_cadastrar_imovel" name="input_telefone_cadastrar_imovel" placeholder="Ex: 47999472753" required autocomplete="off">
+                <label for="input_telefone_editar_imovel">Proprietário Telefone:</label>
+                <input type="number" id="input_telefone_editar_imovel" name="input_telefone_editar_imovel" placeholder="Ex: 47999472753" required autocomplete="off">
             </div>
             <div class="form-group" id="proprietario_email_cadastrar">
-                <label for="input_email_cadastrar_imovel">Proprietário Email:</label>
-                <input type="text" id="input_email_cadastrar_imovel" name="input_email_cadastrar_imovel" placeholder="Ex: eduardo@email.com" required autocomplete="off">
+                <label for="input_email_editar_imovel">Proprietário Email:</label>
+                <input type="text" id="input_email_editar_imovel" name="input_email_editar_imovel" placeholder="Ex: eduardo@email.com" required autocomplete="off">
             </div>
             <h1 class="subtitulos_cadastrar" id="titulo_fotos_cadastrar">Fotos Imóvel:</h1>
             <div class="form-group" id="foto1_cadastrar">
-                <label for="input_foto1_cadastrar_imovel">Foto do Imóvel - 1 :</label>
-                <input type="file" id="input_foto1_cadastrar_imovel" name="input_foto1_cadastrar_imovel" accept="image/*" required>
+                <label for="input_foto1_editar_imovel">Foto do Imóvel - 1 :</label>
+                <input type="file" id="input_foto1_editar_imovel" name="input_foto1_editar_imovel" accept="image/*" required>
             </div>
             <div class="form-group" id="foto2_cadastrar">
-                <label for="input_foto2_cadastrar_imovel">Foto do Imóvel - 2 :</label>
-                <input type="file" id="input_foto2_cadastrar_imovel" name="input_foto2_cadastrar_imovel" accept="image/*" required>
+                <label for="input_foto2_editar_imovel">Foto do Imóvel - 2 :</label>
+                <input type="file" id="input_foto2_editar_imovel" name="input_foto2_editar_imovel" accept="image/*" required>
             </div>
             <div class="form-group" id="foto3_cadastrar">
-                <label for="input_foto3_cadastrar_imovel">Foto do Imóvel - 3 :</label>
-                <input type="file" id="input_foto3_cadastrar_imovel" name="input_foto3_cadastrar_imovel" accept="image/*" required>
+                <label for="input_foto3_editar_imovel">Foto do Imóvel - 3 :</label>
+                <input type="file" id="input_foto3_editar_imovel" name="input_foto3_editar_imovel" accept="image/*" required>
             </div>
             <div class="form-group full-width">
                 <button type="submit">Cadastrar Imóvel</button>
@@ -412,5 +412,6 @@
     <script src="Portal-Home/JS/controla_cadastro_funcionario.js"></script>
     <script src="Portal-Home/JS/controla_frase_do_dia.js"></script>
     <script src="Portal-Home/JS/controla_cadastro_imovel.js"></script>
+    <script src="Portal-Home/JS/controla_pesquisar_imovel.js"></script>
 </body>
 </html>
